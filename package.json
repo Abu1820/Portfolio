@@ -41,43 +41,25 @@
     "vite": "^8.3.5"
   },
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhyyy@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Abdul Majeed R",
+    "email": "abdulmajeed564600@gmail.com",
+    "url": "https://github.com/Abu1820"
   },
-  "description": "Modern 3D Portfolio using React, Three.js and Typescript",
+  "description": "Abdul Majeed R – 3D Developer Portfolio using React, Three.js and TypeScript",
   "keywords": [
-    "reactjs",
+    "portfolio",
     "react",
-    "porfolio-app",
     "three-js",
-    "resend",
-    "netlify",
-    "modern-ui/ux",
-    "js",
-    "javascript",
-    "html",
-    "css",
+    "java",
+    "spring-boot",
+    "typescript",
+    "framer-motion",
     "tailwindcss"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanidhyy/3d-portfolio.git"
+    "url": "https://github.com/Abu1820/Portfolio.git"
   },
-  "homepage": "https://github.com/sanidhyy/3d-portfolio#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/3d-portfolio/issues",
-    "email": "sanidhyyy@gmail.com"
-  },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ]
+  "homepage": "https://portfolio-abd-e3cd.vercel.app"
 }
