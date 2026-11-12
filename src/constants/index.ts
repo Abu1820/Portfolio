@@ -76,6 +76,11 @@ export const NAV_LINKS = [
     title: "Contact",
     link: null,
   },
+  {
+    id: "resume",
+    title: "Resume ↗",
+    link: "/resume.html",
+  },
 ] as const;
 
 // Services / Core Roles
