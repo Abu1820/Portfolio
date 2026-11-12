@@ -54,8 +54,10 @@ Here is the folder structure of this app.
     |-- components/
       |--- canvas/
       |--- about.tsx
+      |--- back-to-top.tsx
       |--- banner.tsx
       |--- contact.tsx
+      |--- custom-cursor.tsx
       |--- experience.tsx
       |--- feedbacks.tsx
       |--- footer.tsx
@@ -63,6 +65,8 @@ Here is the folder structure of this app.
       |--- index.ts
       |--- loader.tsx
       |--- navbar.tsx
+      |--- publications.tsx
+      |--- scroll-progress.tsx
       |--- tech.tsx
       |--- works.tsx
     |-- constants/
@@ -88,6 +92,7 @@ Here is the folder structure of this app.
   |- .gitignore
   |- index.html
   |- netlify.toml
+  |- package-lock.json
   |- package.json
   |- pnpm-lock.yaml
   |- pnpm-workspace.yaml
