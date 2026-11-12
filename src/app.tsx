@@ -14,6 +14,8 @@ import {
   ScrollProgress,
   BackToTop,
   CustomCursor,
+  Skills,
+  Certifications,
 } from "./components";
 import Banner from "./components/banner";
 import Footer from "./components/footer";
@@ -39,9 +41,11 @@ const App = () => {
           <Hero />
         </div>
         <About />
+        <Skills />
         <Experience />
         <Tech />
         <Works />
+        <Certifications />
         <Publications />
         <Feedbacks />
 

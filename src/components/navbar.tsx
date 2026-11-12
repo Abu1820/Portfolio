@@ -24,7 +24,7 @@ export const Navbar = ({ hide }: NavbarProps) => {
 
   // Close menu on resize to desktop
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 640px)");
+    const mq = window.matchMedia("(min-width: 1024px)");
     const handler = (e: MediaQueryListEvent) => { if (e.matches) setToggle(false); };
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
@@ -75,12 +75,12 @@ export const Navbar = ({ hide }: NavbarProps) => {
         </Link>
 
         {/* Nav Links (Desktop) */}
-        <ul className="list-none hidden sm:flex flex-row gap-1">
+        <ul className="list-none hidden lg:flex flex-row gap-1">
           {NAV_LINKS.map((link) => (
             <li
               key={link.id}
               className={cn(
-                "text-[15px] font-medium cursor-pointer rounded-full px-3 py-2 transition duration-200 min-h-0 min-w-0",
+                "text-[13px] xl:text-[14px] font-medium cursor-pointer rounded-full px-2.5 xl:px-3 py-1.5 transition duration-200 min-h-0 min-w-0 whitespace-nowrap",
                 active === link.title
                   ? "text-white bg-[#915eff]/15"
                   : "text-secondary hover:text-white hover:bg-white/5",
@@ -105,8 +105,8 @@ export const Navbar = ({ hide }: NavbarProps) => {
           ))}
         </ul>
 
-        {/* Hamburger Menu (Mobile) */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        {/* Hamburger Menu (Mobile & Tablet) */}
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <button
             aria-label={toggle ? "Close menu" : "Open menu"}
             aria-expanded={toggle}

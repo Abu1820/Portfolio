@@ -35,6 +35,11 @@ export const NAV_LINKS = [
     link: null,
   },
   {
+    id: "skills",
+    title: "Skills",
+    link: null,
+  },
+  {
     id: "work",
     title: "Experience",
     link: null,
@@ -42,6 +47,11 @@ export const NAV_LINKS = [
   {
     id: "projects",
     title: "Projects",
+    link: null,
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
     link: null,
   },
   {
@@ -308,6 +318,76 @@ export const PUBLICATIONS = [
         color: "green-text-gradient",
       },
     ],
+  },
+] as const;
+
+// Professional Certifications (Verified Credentials)
+export const CERTIFICATIONS = [
+  {
+    title: "NPTEL ONLINE CERTIFICATION",
+    subtitle: "Introduction to Industry 4.0 and Industrial Internet of Things",
+    issuer: "IIT Kharagpur & Swayam (Funded by MoE, Govt. of India)",
+    score: "Score: 80%",
+    grade: "(Elite + Silver)",
+    badgeType: "gold" as const,
+    date: "Jul – Oct 2025 (12 Weeks)",
+    credentialId: "NPTEL25CS146S970900013",
+    verifyUrl: "https://nptel.ac.in",
+  },
+  {
+    title: "INFOSYS SPRINGBOARD",
+    subtitle: "Java Foundation Certification",
+    issuer: "Infosys Limited (Springboard Navigate Your Next)",
+    score: "Verified Credential",
+    grade: "Certified Foundation Professional",
+    badgeType: "red" as const,
+    date: "May 2026",
+    credentialId: "Springboard Verified",
+    verifyUrl: "https://verify.onwingspan.com",
+  },
+  {
+    title: "INFOSYS SPRINGBOARD",
+    subtitle: "Python Foundation Certification",
+    issuer: "Infosys Limited (Springboard Navigate Your Next)",
+    score: "Verified Credential",
+    grade: "Certified Foundation Professional",
+    badgeType: "gold" as const,
+    date: "June 2026",
+    credentialId: "Springboard Verified",
+    verifyUrl: "https://verify.onwingspan.com",
+  },
+  {
+    title: "KERALA BLOCKCHAIN ACADEMY",
+    subtitle: "Certified Blockchain Associate (CBA ONLINE)",
+    issuer: "IIITM-K & KBA in Association with MLG Blockchain",
+    score: "Associate Level",
+    grade: "Certified Blockchain Associate",
+    badgeType: "blue" as const,
+    date: "March 2026",
+    credentialId: "IIITMK-KBA-CBA-OL-46447",
+    verifyUrl: "https://verify.kba.ai",
+  },
+  {
+    title: "CODECHEF CERTIFICATION",
+    subtitle: "Learn Java Course & Hands-on Projects",
+    issuer: "CodeChef Pro Learning",
+    score: "Pro Level Completion",
+    grade: "Course Completion Certificate",
+    badgeType: "gold" as const,
+    date: "July 2026",
+    credentialId: "d71b75d",
+    verifyUrl: "https://www.codechef.com/certificates/verify",
+  },
+  {
+    title: "MATHWORKS TRAINING SERVICES",
+    subtitle: "MATLAB Onramp Course",
+    issuer: "MathWorks Training Services",
+    score: "100% Course Completion",
+    grade: "Self-Paced Training Course",
+    badgeType: "red" as const,
+    date: "April 2025",
+    credentialId: "MathWorks Verified",
+    verifyUrl: "https://matlabacademy.mathworks.com",
   },
 ] as const;
 

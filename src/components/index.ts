@@ -19,6 +19,8 @@ import { Publications } from "./publications";
 import { ScrollProgress } from "./scroll-progress";
 import { BackToTop } from "./back-to-top";
 import { CustomCursor } from "./custom-cursor";
+import { Skills } from "./skills";
+import { Certifications } from "./certifications";
 
 export {
   About,
@@ -37,4 +39,6 @@ export {
   ScrollProgress,
   BackToTop,
   CustomCursor,
+  Skills,
+  Certifications,
 };

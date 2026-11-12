@@ -36,6 +36,8 @@ The application blends immersive WebGL 3D graphics and fluid Framer Motion anima
 * **3D Three.js Workstation & Earth:** Custom 3D computer workstation GLTF model and interactive rotatable planetary Earth canvas powered by `@react-three/fiber` and `@react-three/drei`.
 * **Floating 3D Tech Stack Balls:** 12 interactive canvas balls rendering custom textures for Java, Spring Boot, MySQL, Python, C, Cloudflare, Postman, and React.
 * **Hero Dynamic Experience:** Live typewriter subtitle cycling through professional roles, accompanied by an animated numeric counter strip tracking verified milestones.
+* **Categorized Skills Panels:** Three themed interactive panels covering *Programming & Core* (Java, Python, C, OOP, DSA), *Data & Design Tools* (SQL, MySQL, Power BI, Excel, Canva, Postman), and *Web Engineering* (HTML5, CSS3, JavaScript, Spring Boot, Git/GitHub, VS Code).
+* **Parchment Certifications Gallery:** Elegant cream-parchment cards with golden double borders and verified medal seals highlighting verified credentials from IIT Kharagpur (NPTEL), Infosys Springboard, Kerala Blockchain Academy, and CodeChef.
 * **Algorithmic Proficiency Showcase:** Interactive LeetCode topic distribution meters across Arrays, Strings, Sliding Window, Trees, and DP, paired with verified coding contest achievements.
 * **Project Cards with 3D Spotlight:** Mouse-following radial glow illumination, smooth image zoom, live production indicators, animated action tooltips, and interactive **Quick-Inspect Modals**.
 * **Global Scroll Progress & Navigation:** Glassmorphic sticky navbar, 3px top neon gradient reading progress bar, and floating SVG circular back-to-top rocket button.
