@@ -161,22 +161,6 @@ export const TECHNOLOGIES = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "Postman",
-    icon: postman,
-  },
 ] as const;
 
 // Experiences

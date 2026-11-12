@@ -63,9 +63,9 @@ export const Tech = () => {
             key={technology.name}
           >
             {/* Ball or Fallback */}
-            <div className="tech-ball-wrapper w-24 h-24 xs:w-28 xs:h-28">
+            <div className="tech-ball-wrapper w-24 h-24 xs:w-28 xs:h-28 rounded-full overflow-hidden flex items-center justify-center">
               {use3DBalls ? (
-                <BallCanvas icon={technology.icon} />
+                <BallCanvas icon={technology.icon} name={technology.name} />
               ) : (
                 <TechBall name={technology.name} icon={technology.icon} />
               )}
