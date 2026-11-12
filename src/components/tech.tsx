@@ -46,11 +46,11 @@ export const Tech = () => {
   const use3DBalls = isInView && !limitedWebGL;
 
   return (
-    <SectionWrapper idName="tech">
+    <SectionWrapper idName="skills">
       {/* Section Header */}
-      <motion.div variants={textVariant()} className="mb-10">
-        <p className={styles.sectionSubText}>My technical stack</p>
-        <h2 className={styles.sectionHeadText}>Technologies.</h2>
+      <motion.div variants={textVariant()} className="mb-10 text-center sm:text-left">
+        <p className={styles.sectionSubText}>Interactive 3D Stack & Tools</p>
+        <h2 className={styles.sectionHeadText}>Skills & Technologies.</h2>
       </motion.div>
 
       <div

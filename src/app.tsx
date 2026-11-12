@@ -14,7 +14,6 @@ import {
   ScrollProgress,
   BackToTop,
   CustomCursor,
-  Skills,
   Certifications,
 } from "./components";
 import Banner from "./components/banner";
@@ -41,9 +40,8 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Skills />
-        <Experience />
         <Tech />
+        <Experience />
         <Works />
         <Certifications />
         <Publications />

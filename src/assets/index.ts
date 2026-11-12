@@ -23,6 +23,13 @@ import springboot from "./tech/springboot.png";
 import mysql from "./tech/mysql.png";
 import postman from "./tech/postman.png";
 import cloudflare from "./tech/cloudflare.png";
+import sql from "./tech/sql.png";
+import powerbi from "./tech/powerbi.png";
+import canva from "./tech/canva.png";
+import excel from "./tech/excel.png";
+import vscode from "./tech/vscode.png";
+import dsa from "./tech/dsa.png";
+import oop from "./tech/oop.png";
 
 // Experience / Companies
 import infosys from "./company/infosys.png";
@@ -60,6 +67,13 @@ export {
   mysql,
   postman,
   cloudflare,
+  sql,
+  powerbi,
+  canva,
+  excel,
+  vscode,
+  dsa,
+  oop,
   infosys,
   maincrafts,
   civicpulse,

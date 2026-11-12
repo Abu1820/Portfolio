@@ -17,6 +17,13 @@ import {
   javascript,
   reactjs,
   git,
+  sql,
+  powerbi,
+  canva,
+  excel,
+  vscode,
+  dsa,
+  oop,
   infosys,
   maincrafts,
   civicpulse,
@@ -107,6 +114,10 @@ export const TECHNOLOGIES = [
     icon: springboot,
   },
   {
+    name: "SQL",
+    icon: sql,
+  },
+  {
     name: "MySQL",
     icon: mysql,
   },
@@ -119,12 +130,32 @@ export const TECHNOLOGIES = [
     icon: c,
   },
   {
-    name: "Postman",
-    icon: postman,
+    name: "DSA",
+    icon: dsa,
   },
   {
-    name: "Cloudflare",
-    icon: cloudflare,
+    name: "OOP",
+    icon: oop,
+  },
+  {
+    name: "Power BI",
+    icon: powerbi,
+  },
+  {
+    name: "Excel",
+    icon: excel,
+  },
+  {
+    name: "Canva",
+    icon: canva,
+  },
+  {
+    name: "Git / GitHub",
+    icon: git,
+  },
+  {
+    name: "VS Code",
+    icon: vscode,
   },
   {
     name: "React JS",
@@ -143,8 +174,8 @@ export const TECHNOLOGIES = [
     icon: css,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Postman",
+    icon: postman,
   },
 ] as const;
 
