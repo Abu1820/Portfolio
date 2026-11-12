@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🌌 Abdul Majeed R — 3D Developer Portfolio
+# 🌌 Abdul Majeed R | Portfolio
 
 <p align="center">
   <b>A high-performance, interactive 3D portfolio and digital showcase built with Three.js, React 19, and Tailwind CSS.</b>
 </p>
 
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://portfolio-abd-e3cd.vercel.app)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://abdulmajeedr-portfolio.vercel.app)
 [![React 19](https://img.shields.io/badge/React-19.3-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-0.186-black?style=for-the-badge&logo=threedotjs)](https://threejs.org/)
@@ -15,8 +15,8 @@
 
 <br />
 
-🌐 **Live Portfolio:** [https://portfolio-abd-e3cd.vercel.app](https://portfolio-abd-e3cd.vercel.app)  
-📄 **ATS-Optimized Resume:** [https://portfolio-abd-e3cd.vercel.app/resume.html](https://portfolio-abd-e3cd.vercel.app/resume.html)  
+🌐 **Live Portfolio:** [https://abdulmajeedr-portfolio.vercel.app](https://abdulmajeedr-portfolio.vercel.app)  
+📄 **ATS-Optimized Resume:** [https://abdulmajeedr-portfolio.vercel.app/resume.html](https://abdulmajeedr-portfolio.vercel.app/resume.html)  
 📫 **Contact:** [abdulmajeed564600@gmail.com](mailto:abdulmajeed564600@gmail.com)
 
 </div>

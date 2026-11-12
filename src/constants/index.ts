@@ -79,7 +79,7 @@ export const NAV_LINKS = [
   {
     id: "resume",
     title: "Resume ↗",
-    link: "/resume.html",
+    link: "/resume.html?v=2",
   },
 ] as const;
 
