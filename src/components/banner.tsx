@@ -49,14 +49,23 @@ const Banner = ({ hide, setHide }: BannerProps) => {
             <span className="sr-only">Light bulb</span>
           </span>
           <span>
-            Did you enjoy this portfolio? Take a look at my{" "}
+            🌱 Project <strong>Uniora</strong> was awarded official KPRIET Seed Funding! Explore the{" "}
             <Link
-              to="https://www.sanidhyy.name"
+              to="https://uni-ora.uniora-official.workers.dev/dashboard/"
               target="_blank"
               rel="noreferrer noopener"
-              className="inline font-medium text-blue-600 underline-offset-2 decoration-600 hover:opacity-75"
+              className="inline font-medium text-blue-400 underline-offset-2 decoration-600 hover:text-blue-300 transition"
             >
-              new portfolio
+              live platform
+            </Link>{" "}
+            or check out my co-authored book on{" "}
+            <Link
+              to="https://amzn.in/d/j7muHtb"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline font-medium text-orange-400 underline-offset-2 decoration-600 hover:text-orange-300 transition"
+            >
+              Amazon Kindle
             </Link>
             .
           </span>

@@ -23,19 +23,34 @@
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  /* Better touch targets on mobile */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Smoother font rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-.hash-span {
-  margin-top: -100px;
-  padding-bottom: 100px;
-  display: block;
-}
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
@@ -251,4 +266,97 @@ canvas {
 /* Hide reCAPTCHA v3 badge */
 .grecaptcha-badge {
   visibility: hidden;
+}
+
+/* ── RESPONSIVE UTILS ── */
+
+/* Navbar mobile fix: allow full-width pill links */
+.nav-link-pill {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  transition: background 0.2s;
+}
+.nav-link-pill:hover {
+  background: rgba(145, 94, 255, 0.12);
+}
+
+/* Section anchor offset fix for sticky navbar */
+.hash-span {
+  margin-top: -80px;
+  padding-bottom: 80px;
+  display: block;
+}
+
+/* Tech balls responsive: smaller on mobile */
+@media (max-width: 479px) {
+  .tech-ball-wrapper {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .tech-ball-wrapper canvas {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+
+/* Project cards: full width on small screens */
+@media (max-width: 639px) {
+  .project-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* Achievement cards: full width on small screens */
+@media (max-width: 479px) {
+  .achievement-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* Contact section: stack fully on mobile */
+@media (max-width: 1279px) {
+  .contact-layout {
+    flex-direction: column !important;
+  }
+}
+
+/* Footer: stack on mobile */
+@media (max-width: 639px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+}
+
+/* Vertical timeline: smaller text on mobile */
+@media (max-width: 479px) {
+  .vertical-timeline-element-content h3 {
+    font-size: 18px !important;
+  }
+  .vertical-timeline-element-date {
+    font-size: 12px !important;
+  }
+}
+
+/* Smooth scroll offset for all anchor targets */
+:target {
+  scroll-margin-top: 90px;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #915eff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Selection color */
+::selection {
+  background: #915eff44;
+  color: #fff;
 }

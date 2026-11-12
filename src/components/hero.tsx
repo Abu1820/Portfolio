@@ -1,53 +1,194 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import { ComputersCanvas } from "./canvas";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
 
-// Hero
+const ROLES = [
+  "Java Backend Architect",
+  "Spring Boot & REST API Specialist",
+  "Competitive Programmer (400+ LeetCode)",
+  "Seed-Funded System Creator",
+  "AI Recommendation Systems Co-Author",
+];
+
+const STATS = [
+  { target: 400, suffix: "+", label: "LeetCode Solved" },
+  { target: 9.03, suffix: "", label: "College CGPA", isDecimal: true },
+  { target: 2, suffix: "x", label: "Coding Awards" },
+  { target: 1, suffix: "", label: "Kindle Book" },
+];
+
+// Typewriter Subtitle
+const Typewriter = () => {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentFullText = ROLES[roleIndex];
+    const typingSpeed = isDeleting ? 40 : 80;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        const nextText = currentFullText.slice(0, displayText.length + 1);
+        setDisplayText(nextText);
+        if (nextText === currentFullText) {
+          setTimeout(() => setIsDeleting(true), 1600);
+        }
+      } else {
+        // Deleting
+        const nextText = currentFullText.slice(0, displayText.length - 1);
+        setDisplayText(nextText);
+        if (nextText === "") {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % ROLES.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, roleIndex]);
+
+  return (
+    <span className="inline-flex items-center text-[#915eff] font-semibold">
+      <span>{displayText}</span>
+      <span className="w-0.5 h-5 bg-[#915eff] ml-1 animate-pulse" />
+    </span>
+  );
+};
+
+// Animated Number Counter
+const AnimatedCounter = ({
+  target,
+  suffix,
+  isDecimal,
+}: {
+  target: number;
+  suffix: string;
+  isDecimal?: boolean;
+}) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 1600;
+    const stepTime = 30;
+    const steps = duration / stepTime;
+    const increment = target / steps;
+
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(interval);
+      } else {
+        setCount(isDecimal ? Math.round(start * 100) / 100 : Math.floor(start));
+      }
+    }, stepTime);
+
+    return () => clearInterval(interval);
+  }, [target, isDecimal]);
+
+  return (
+    <span>
+      {isDecimal ? count.toFixed(2) : count}
+      {suffix}
+    </span>
+  );
+};
+
+// Hero Component
 export const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto touch-pan-y">
+    <section className="relative w-full min-h-screen mx-auto touch-pan-y overflow-hidden">
       <div
         className={cn(
           styles.paddingX,
-          "absolute inset-0 top-30 max-w-7xl mx-auto flex flex-row items-start gap-5 z-10 pointer-events-auto md:pointer-events-none",
+          "absolute inset-0 top-24 sm:top-28 max-w-7xl mx-auto flex flex-row items-start gap-5 z-10 pointer-events-none md:pointer-events-none",
         )}
       >
-        {/* Title */}
+        {/* Accent bar */}
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        {/* About Me */}
-        <div className="pointer-events-auto">
-          <h1 className={cn(styles.heroHeadText, "text-white")}>
-            Hi, I'm <span className="text-[#915eff]">Shubham</span>
+        {/* Hero text */}
+        <div className="pointer-events-auto max-w-4xl">
+          <h1 className="font-black text-white xl:text-[68px] lg:text-[56px] sm:text-[46px] xs:text-[36px] text-[30px] xl:leading-[82px] lg:leading-[70px] sm:leading-[58px] leading-[40px] mt-2 tracking-tight">
+            <span>Hi, I'm </span>
+            <span className="text-[#915eff] whitespace-nowrap inline-block">
+              Abdul Majeed R
+            </span>
           </h1>
-          <p className={cn(styles.heroSubText, "mt-2 text-white-100")}>
-            I develop 3D visuals, user <br className="sm:block hidden" />
-            interfaces and web applications
+
+          {/* Dynamic Typewriter Subtitle */}
+          <div className="mt-2 text-[18px] sm:text-[24px] font-medium text-white-100 min-h-[32px] sm:min-h-[36px] flex items-center">
+            <span className="text-secondary mr-2">I am a</span>
+            <Typewriter />
+          </div>
+
+          <p className="mt-2 text-secondary text-[14px] sm:text-[16px] max-w-xl leading-relaxed">
+            Specializing in high-throughput Java backend systems, Spring Boot microservices,
+            and scalable web platforms engineered for performance.
           </p>
+
+          {/* CTA Buttons */}
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a
+              href="/resume.html"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="bg-[#915eff] hover:bg-[#7b46e3] text-white font-semibold py-2.5 px-6 rounded-xl shadow-lg shadow-[#915eff]/30 transition duration-200 inline-flex items-center gap-2 text-sm"
+            >
+              View Resume ↗
+            </a>
+            <a
+              href="#contact"
+              className="border border-[#915eff] text-white hover:bg-[#915eff]/15 font-semibold py-2.5 px-6 rounded-xl transition duration-200 inline-flex items-center text-sm"
+            >
+              Get in Touch
+            </a>
+          </div>
+
+          {/* Animated Metrics Counter Strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="mt-6 flex flex-wrap gap-4 sm:gap-6 pt-4 border-t border-white/10"
+          >
+            {STATS.map((stat, i) => (
+              <div key={`stat-${i}`} className="flex flex-col">
+                <span className="text-white font-extrabold text-[20px] sm:text-[24px] tracking-tight text-[#915eff]">
+                  <AnimatedCounter
+                    target={stat.target}
+                    suffix={stat.suffix}
+                    isDecimal={stat.isDecimal}
+                  />
+                </span>
+                <span className="text-secondary text-[11px] sm:text-[12px] font-medium uppercase tracking-wider">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      {/* Computer Model */}
+      {/* 3D Computer Model */}
       <ComputersCanvas />
 
-      {/* Scroll to about section */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
-        <a href="#about">
-          <div className="w-8.75 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+      {/* Scroll indicator */}
+      <div className="absolute xs:bottom-10 bottom-6 w-full flex justify-center items-center z-10">
+        <a href="#about" aria-label="Scroll to About">
+          <div className="w-9 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
+              animate={{ y: [0, 24, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
           </div>
@@ -56,3 +197,5 @@ export const Hero = () => {
     </section>
   );
 };
+
+export default Hero;

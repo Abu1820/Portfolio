@@ -1,40 +1,29 @@
-// Contains constant data for using in website
-// ! Don't remove anything from here if not sure
+// Contains constant data for Abdul Majeed R's 3D Portfolio
 
 import {
   mobile,
   backend,
   creator,
   web,
-  javascript,
-  typescript,
+  java,
+  python,
+  c,
+  springboot,
+  mysql,
+  postman,
+  cloudflare,
   html,
   css,
+  javascript,
   reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  threejs,
-  project1,
-  project2,
-  project3,
-  project4,
-  project5,
-  project6,
-  user1,
-  user2,
-  user3,
-  youtube,
+  infosys,
+  maincrafts,
+  civicpulse,
+  uniora,
+  book,
+  profile,
   linkedin,
-  twitter,
   github,
 } from "../assets";
 
@@ -47,7 +36,22 @@ export const NAV_LINKS = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experience",
+    link: null,
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    link: null,
+  },
+  {
+    id: "publications",
+    title: "Publications",
+    link: null,
+  },
+  {
+    id: "achievements",
+    title: "Achievements",
     link: null,
   },
   {
@@ -56,34 +60,70 @@ export const NAV_LINKS = [
     link: null,
   },
   {
-    id: "source-code",
-    title: "Source Code",
-    link: "http://www.github.com/sanidhyy/3d-portfolio",
+    id: "resume",
+    title: "Resume ↗",
+    link: "/resume.html",
   },
 ] as const;
 
-// Services
+// Services / Core Roles
 export const SERVICES = [
   {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "Java Backend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Spring Boot & REST APIs",
+    icon: web,
+  },
+  {
+    title: "Competitive Programmer (400+ LeetCode)",
     icon: creator,
+  },
+  {
+    title: "Book Co-Author & AI Systems",
+    icon: mobile,
   },
 ] as const;
 
-// Technologies
+// Technologies (used in 3D floating canvas balls)
 export const TECHNOLOGIES = [
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "Spring Boot",
+    icon: springboot,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  {
+    name: "Cloudflare",
+    icon: cloudflare,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -93,290 +133,194 @@ export const TECHNOLOGIES = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ] as const;
 
 // Experiences
 export const EXPERIENCES = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Java Backend Development Intern",
+    company_name: "Infosys Springboard (Virtual 7.0)",
+    icon: infosys,
+    iconBg: "#007cc3",
+    date: "June 2026 – August 2026",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Engineered robust RESTful API endpoints in Java and Spring Boot for user management, issue tracking, and service workflows.",
+      "Implemented secure stateless authentication and role-based access control (RBAC) using JWT and Spring Security.",
+      "Integrated Spring Data JPA and Hibernate with MySQL, designing normalized database schemas and optimizing query execution.",
+      "Earned official Infosys Java Foundation and Python Foundation professional certifications during the internship.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Full Stack Web Development Intern",
+    company_name: "MainCrafts Technology",
+    icon: maincrafts,
+    iconBg: "#0284c7",
+    date: "June 2026 – July 2026",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completed a 4-week internship focused on frontend development and responsive web architecture.",
+      "Developed responsive multi-page web interfaces using HTML5, CSS3 Flexbox/Grid, and vanilla JavaScript.",
+      "Built an interactive contact form module with client-side state persistence using LocalStorage and dynamic form validation.",
+      "Awarded an Internship Completion Certificate and a Letter of Recommendation upon timely completion.",
     ],
   },
 ] as const;
 
-// Testimonials
+// Key Achievements & Recognition (Replaces generic Testimonials)
 export const TESTIMONIALS = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: user1,
+      "Won 1st Prize and ₹1,500 cash award in Technical Puzzle Clash covering Operating Systems, DBMS, and Computer Networks at CIT.",
+    name: "1st Prize",
+    designation: "CIT CRYPTERA 2026",
+    company: "CIT Coimbatore",
+    image: profile,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: user2,
+      "Secured 2nd Place in competitive coding tournament (Logic Sprint, HackerRank Arena, Mystery Code) organized by IEEE Education Society.",
+    name: "2nd Prize",
+    designation: "IEEE CodeQuest",
+    company: "IEEE Student Branch",
+    image: profile,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: user3,
+      "Project Uniora was selected for and awarded official institutional Seed Funding from KPRIET for social impact and technical innovation.",
+    name: "Seed Funding",
+    designation: "Project Uniora",
+    company: "KPRIET Innovation Cell",
+    image: profile,
+  },
+  {
+    testimonial:
+      "Solved 400+ problems across arrays, strings, hashing, sliding window, sorting, and heaps, maintaining consistent problem-solving proficiency.",
+    name: "400+ Solved",
+    designation: "LeetCode Specialist",
+    company: "Competitive Programming",
+    image: profile,
   },
 ] as const;
 
-// Projects
+// Featured Projects
 export const PROJECTS = [
   {
-    name: "Disney+ Clone",
+    name: "CivicPulse – Smart Governance",
+    category: "Java & Full Stack",
+    isLive: false,
+    status: "Open Source Platform",
     description:
-      "Disney+ is one of the biggest streaming platforms used by millions of people world-wide and allows us to stream high quality content in 4k and various other formats",
+      "Full-stack civic reporting platform enabling citizens to report and track municipal issues like potholes and drainage. Built with Spring Boot, JWT security, Hibernate, MySQL, and React.",
+    highlights: [
+      "Engineered with Spring Boot 3, RESTful APIs, and Spring Security with stateless JWT token authentication.",
+      "Integrated Spring Data JPA and Hibernate with MySQL, featuring normalized schemas and optimized queries.",
+      "Citizen grievance reporting workflow with status tracking, geo-tagging, and automated administrative routing.",
+      "Role-based access control (Citizen, Municipal Officer, Super Admin) with structured audit logging."
+    ],
     tags: [
+      {
+        name: "springboot",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "green-text-gradient",
+      },
       {
         name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
         color: "pink-text-gradient",
       },
+      {
+        name: "jwt",
+        color: "orange-text-gradient",
+      },
     ],
-    image: project1,
-    source_code_link: "https://github.com/sanidhyy/disney-clone",
-    live_site_link: "https://clonedisneyplus.web.app",
+    image: civicpulse,
+    source_code_link: "https://github.com/Abu1820/CivicPulse",
+    live_site_link: "https://github.com/Abu1820/CivicPulse",
   },
   {
-    name: "Golds Gym",
+    name: "Uniora – Welfare Schemes Platform",
+    category: "Cloud & Edge Systems",
+    isLive: true,
+    status: "Live Production Deployment",
     description:
-      "Web application that enables users to search for fitness exercises, effective personalized positions, and recommends new exercises based on their personal preferences.",
+      "Eligibility-matching engine mapping citizens to applicable government welfare schemes. Seed-funded by KPRIET, architected with Cloudflare Workers edge caching and Supabase for offline accessibility.",
+    highlights: [
+      "Awarded institutional Seed Funding by KPRIET Innovation Cell for community impact and technical merit.",
+      "Rule-based eligibility evaluation engine matching citizen demographics to state and central schemes.",
+      "Serverless edge architecture deployed on Cloudflare Workers ensuring sub-50ms worldwide response times.",
+      "Supabase PostgreSQL data layer configured with row-level security policies and resilient caching."
+    ],
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "cloudflare-workers",
+        color: "orange-text-gradient",
       },
       {
-        name: "rapidapi",
+        name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project2,
-    source_code_link: "https://github.com/sanidhyy/fitness-app",
-    live_site_link: "https://fitness-gym-react.netlify.app",
-  },
-  {
-    name: "Shoppy",
-    description:
-      "The most personalised admin dashboard web application that allows enables users to choose customized themes and dark mode with different pages and variety of charts.",
-    tags: [
-      {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "syncfusion",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: project3,
-    source_code_link: "https://github.com/sanidhyy/admin-dashboard",
-    live_site_link: "https://shoppy-dashboard-react.netlify.app",
-  },
-  {
-    name: "TikTok Clone",
-    description:
-      "A Next JS Web Application that enables users to upload videos of any length and size, create accounts and connect with other people just like any other social media.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project4,
-    source_code_link: "https://github.com/sanidhyy/tiktok-clone",
-    live_site_link: "https://tiktok-clone-react.vercel.app",
-  },
-  {
-    name: "Cryptoverse",
-    description:
-      "Best Cryptocurrency web application that allows users to view price, market cap and daily change in realtime for almost every cryptocurrency in the world.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project5,
-    source_code_link: "https://github.com/sanidhyy/crypto-app",
-    live_site_link: "https://reactjscryptoapp.netlify.app",
-  },
-  {
-    name: "Travel Advisor",
-    description:
-      "Web application that enables you to view your nearby restaurants, hotels and attractions which can be sorted by ratings, price and much more.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rapidapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "material-ui",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project6,
-    source_code_link: "https://github.com/sanidhyy/travel-advisor",
-    live_site_link: "https://travel-advisor-reactjs.netlify.app",
+    image: uniora,
+    source_code_link: "https://uni-ora.uniora-official.workers.dev/dashboard/",
+    live_site_link: "https://uni-ora.uniora-official.workers.dev/dashboard/",
   },
 ] as const;
 
+// Publications / Authored Books
+export const PUBLICATIONS = [
+  {
+    title: "Mastering Recommendation Systems: From Basics to Breakthroughs",
+    subtitle:
+      "A Complete Guide to AI-Powered Recommendation Systems – From Fundamental Techniques to Advanced Deep Learning",
+    authors: "Co-authored by Abdul Majeed R",
+    publisher: "Amazon Kindle Edition",
+    description:
+      "A comprehensive technical book exploring algorithmic recommendation frameworks, collaborative filtering, matrix factorization, and advanced deep learning breakthroughs in modern AI systems.",
+    image: book,
+    link: "https://amzn.in/d/j7muHtb",
+    tags: [
+      {
+        name: "amazon-kindle",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "deep-learning",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ai-systems",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "python",
+        color: "green-text-gradient",
+      },
+    ],
+  },
+] as const;
+
+// Social Links
 export const SOCIALS = [
   {
-    name: "YouTube",
-    icon: youtube,
-    link: "https://www.youtube.com",
-  },
-  {
-    name: "Linkedin",
+    name: "LinkedIn",
     icon: linkedin,
-    link: "https://www.linkedin.com/in/sanidhyy",
-  },
-  {
-    name: "Twitter",
-    icon: twitter,
-    link: "https://x.com/_sanidhyy",
+    link: "https://www.linkedin.com/in/abdulmajeedr/",
   },
   {
     name: "GitHub",
     icon: github,
-    link: "https://github.com/sanidhyy",
+    link: "https://github.com/Abu1820",
   },
 ] as const;

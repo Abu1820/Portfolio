@@ -15,6 +15,10 @@ import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { Tech } from "./tech";
 import { Works } from "./works";
+import { Publications } from "./publications";
+import { ScrollProgress } from "./scroll-progress";
+import { BackToTop } from "./back-to-top";
+import { CustomCursor } from "./custom-cursor";
 
 export {
   About,
@@ -29,4 +33,8 @@ export {
   StarsCanvas,
   Tech,
   Works,
+  Publications,
+  ScrollProgress,
+  BackToTop,
+  CustomCursor,
 };

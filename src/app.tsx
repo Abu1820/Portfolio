@@ -9,7 +9,11 @@ import {
   Navbar,
   Tech,
   Works,
+  Publications,
   StarsCanvas,
+  ScrollProgress,
+  BackToTop,
+  CustomCursor,
 } from "./components";
 import Banner from "./components/banner";
 import Footer from "./components/footer";
@@ -20,7 +24,15 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      {/* 1. Global Glowing Scroll Progress Bar */}
+      <ScrollProgress />
+
+      {/* 2. Interactive Smooth Cursor Follower (Desktop Only) */}
+      <CustomCursor />
+
+      {/* 3. Global Banner Notification */}
       <Banner hide={hide} setHide={setHide} />
+
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar hide={hide} />
@@ -30,6 +42,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
+        <Publications />
         <Feedbacks />
 
         {/* Contact */}
@@ -39,6 +52,9 @@ const App = () => {
         </div>
         <Footer />
       </div>
+
+      {/* 4. Floating Back to Top Button with Circular Progress Ring */}
+      <BackToTop />
     </BrowserRouter>
   );
 };

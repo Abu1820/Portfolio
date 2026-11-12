@@ -7,32 +7,44 @@ import { cn } from "../utils/lib";
 // Footer
 const Footer = () => {
   return (
-    <nav
+    <footer
       className={cn(
         styles.paddingX,
-        "w-full flex items-center py-8 bg-primary border-t border-t-secondary/5"
+        "w-full py-6 sm:py-8 bg-primary border-t border-t-secondary/10",
       )}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <p className="text-white text-md font-bold flex">
-          &copy; Shubham {new Date().getFullYear()}. All rights reserved.
+      <div className="footer-inner w-full flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto gap-4">
+        {/* Copyright */}
+        <p className="text-secondary text-sm font-medium text-center sm:text-left">
+          © Abdul Majeed R {new Date().getFullYear()}. All rights reserved.
         </p>
 
-        {/* Nav Links (Desktop) */}
-        <ul className="list-none hidden flex-row sm:flex gap-10">
+        {/* Social Icons */}
+        <ul className="list-none flex flex-row gap-5 sm:gap-8 items-center">
           {SOCIALS.map((social) => (
             <li
               key={social.name}
-              className="text-secondary font-poppins font-medium cursor-pointer text-[16px] opacity-80 hover:opacity-100 transition"
+              className="opacity-70 hover:opacity-100 transition duration-200"
+              title={social.name}
             >
-              <Link to={social.link} target="_blank" rel="noreferrer noopener">
-                <img src={social.icon} alt={social.name} className="h-6 w-6" />
+              <Link
+                to={social.link}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={social.name}
+                className="min-h-0 min-w-0"
+              >
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="h-6 w-6 object-contain"
+                />
               </Link>
             </li>
           ))}
         </ul>
       </div>
-    </nav>
+    </footer>
   );
 };
 

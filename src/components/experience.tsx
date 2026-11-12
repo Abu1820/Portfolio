@@ -18,10 +18,20 @@ type ExperienceCardProps = {
 // Experience Card
 const ExperienceCard = ({ experience }: ExperienceCardProps) => (
   <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
+    contentStyle={{
+      background: "#1d1836",
+      color: "#fff",
+      boxShadow: "0 4px 24px rgba(0,0,0,0.3)",
+      border: "1px solid rgba(145,94,255,0.1)",
+      borderRadius: "16px",
+    }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
     date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    dateClassName="text-secondary text-sm font-medium"
+    iconStyle={{
+      background: experience.iconBg,
+      boxShadow: "0 0 0 4px #232631, 0 2px 8px rgba(0,0,0,0.4)",
+    }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <img
@@ -34,9 +44,11 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => (
   >
     {/* Title */}
     <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+      <h3 className="text-white text-[20px] sm:text-[24px] font-bold leading-snug">
+        {experience.title}
+      </h3>
       <p
-        className="text-secondary text-[16px] font-semibold"
+        className="text-[#915eff] text-[14px] sm:text-[16px] font-semibold mt-1"
         style={{ margin: 0 }}
       >
         {experience.company_name}
@@ -44,11 +56,11 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => (
     </div>
 
     {/* Experience Points */}
-    <ul className="mt-5 list-disc ml-5 space-y-2">
+    <ul className="mt-4 list-disc ml-5 space-y-2">
       {experience.points.map((point, i) => (
         <li
           key={`experience-point-${i}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
+          className="text-white-100 text-[13px] sm:text-[14px] pl-1 tracking-wide leading-relaxed"
         >
           {point}
         </li>
@@ -68,9 +80,9 @@ export const Experience = () => {
           <h2 className={styles.sectionHeadText}>Work Experience.</h2>
         </motion.div>
 
-        {/* Experience Card */}
-        <div className="empty-20 flex flex-col">
-          <VerticalTimeline>
+        {/* Experience Timeline */}
+        <div className="mt-10 flex flex-col">
+          <VerticalTimeline lineColor="rgba(145,94,255,0.25)">
             {EXPERIENCES.map((experience, i) => (
               <ExperienceCard key={i} experience={experience} />
             ))}

@@ -24,11 +24,20 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import typescript from "./tech/typescript.png";
+import java from "./tech/java.png";
+import python from "./tech/python.png";
+import c from "./tech/c.png";
+import springboot from "./tech/springboot.png";
+import mysql from "./tech/mysql.png";
+import postman from "./tech/postman.png";
+import cloudflare from "./tech/cloudflare.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import infosys from "./company/infosys.png";
+import maincrafts from "./company/maincrafts.png";
 
 import project1 from "./projects/project1.png";
 import project2 from "./projects/project2.png";
@@ -36,6 +45,10 @@ import project3 from "./projects/project3.png";
 import project4 from "./projects/project4.png";
 import project5 from "./projects/project5.png";
 import project6 from "./projects/project6.png";
+import civicpulse from "./projects/civicpulse.jpeg";
+import uniora from "./projects/uniora.png";
+import book from "./projects/book.jpg";
+import profile from "./profile.jpeg";
 
 import user1 from "./testimonials/user1.jpg";
 import user2 from "./testimonials/user2.jpg";
@@ -69,16 +82,29 @@ export {
   tailwind,
   typescript,
   threejs,
+  java,
+  python,
+  c,
+  springboot,
+  mysql,
+  postman,
+  cloudflare,
   meta,
   shopify,
   starbucks,
   tesla,
+  infosys,
+  maincrafts,
   project1,
   project2,
   project3,
   project4,
   project5,
   project6,
+  civicpulse,
+  uniora,
+  book,
+  profile,
   user1,
   user2,
   user3,
