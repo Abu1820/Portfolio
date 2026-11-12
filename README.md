@@ -3,7 +3,7 @@
 # 🌌 Abdul Majeed R | Portfolio
 
 <p align="center">
-  <b>A high-performance, interactive 3D portfolio and digital showcase built with Three.js, React 19, and Tailwind CSS.</b>
+  <b>A high-performance, interactive 3D developer portfolio and technical showcase engineered with Three.js, React 19, TypeScript, and Tailwind CSS.</b>
 </p>
 
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://abdulmajeedr-portfolio.vercel.app)
@@ -16,7 +16,6 @@
 <br />
 
 🌐 **Live Portfolio:** [https://abdulmajeedr-portfolio.vercel.app](https://abdulmajeedr-portfolio.vercel.app)  
-📄 **ATS-Optimized Resume:** [https://abdulmajeedr-portfolio.vercel.app/resume.html](https://abdulmajeedr-portfolio.vercel.app/resume.html)  
 📫 **Contact:** [abdulmajeed564600@gmail.com](mailto:abdulmajeed564600@gmail.com)
 
 </div>
@@ -25,120 +24,80 @@
 
 ## 📌 Overview
 
-This repository houses the source code for the personal developer portfolio of **Abdul Majeed R**, a Computer Science and Engineering undergraduate at **KPRIET** (CGPA: **9.03**).
+This repository contains the production source code for the personal developer portfolio of **Abdul Majeed R**, a Computer Science and Engineering undergraduate at **KPR Institute of Engineering and Technology (KPRIET)** (CGPA: **9.03**).
 
-The application blends immersive WebGL 3D graphics and fluid Framer Motion animations with a concrete showcase of real-world software engineering capabilities — from production-grade **Java & Spring Boot backend architectures** to **serverless edge deployments** and **published AI literature**.
-
----
-
-## 🚀 Key Architectural Features
-
-* **3D Three.js Workstation & Earth:** Custom 3D computer workstation GLTF model and interactive rotatable planetary Earth canvas powered by `@react-three/fiber` and `@react-three/drei`.
-* **Floating 3D Tech Stack Balls:** 12 interactive canvas balls rendering custom textures for Java, Spring Boot, MySQL, Python, C, Cloudflare, Postman, and React.
-* **Hero Dynamic Experience:** Live typewriter subtitle cycling through professional roles, accompanied by an animated numeric counter strip tracking verified milestones.
-* **Categorized Skills Panels:** Three themed interactive panels covering *Programming & Core* (Java, Python, C, OOP, DSA), *Data & Design Tools* (SQL, MySQL, Power BI, Excel, Canva, Postman), and *Web Engineering* (HTML5, CSS3, JavaScript, Spring Boot, Git/GitHub, VS Code).
-* **Parchment Certifications Gallery:** Elegant cream-parchment cards with golden double borders and verified medal seals highlighting verified credentials from IIT Kharagpur (NPTEL), Infosys Springboard, Kerala Blockchain Academy, and CodeChef.
-* **Algorithmic Proficiency Showcase:** Interactive LeetCode topic distribution meters across Arrays, Strings, Sliding Window, Trees, and DP, paired with verified coding contest achievements.
-* **Project Cards with 3D Spotlight:** Mouse-following radial glow illumination, smooth image zoom, live production indicators, animated action tooltips, and interactive **Quick-Inspect Modals**.
-* **Global Scroll Progress & Navigation:** Glassmorphic sticky navbar, 3px top neon gradient reading progress bar, and floating SVG circular back-to-top rocket button.
-* **Standalone ATS Resume:** Fully responsive, printable, and ATS-optimized HTML resume integrated at `/resume.html` with unified branding and custom SVG favicon.
+The application merges real-time WebGL 3D graphics and Framer Motion micro-interactions with an exhaustive showcase of software engineering competencies — spanning production-grade **Java & Spring Boot backend systems**, **relational database architecture**, **serverless edge deployments**, and **published AI literature**.
 
 ---
 
-## 💻 Featured Projects
+## 🚀 Key Features & Highlights
 
-### 1. 🏛️ [CivicPulse – Smart Governance Platform](https://github.com/Abu1820/CivicPulse)
-> **Full-Stack Civic Grievance & Municipal Resolution Platform**
+### 1. 🪐 Interactive 3D Skills & Technologies Balls
+* **Real-time WebGL Decal Mesh:** Interactive floating icosahedron 3D balls rendering high-resolution tech icons powered by `@react-three/fiber` and `@react-three/drei`.
+* **Complete Core Stack:** Curated 14 skills covering **Java, Spring Boot, SQL, MySQL, Python, C, DSA, OOP, Power BI, Excel, Canva, Git / GitHub, VS Code, and React JS**.
+* **Engineered Context Protection:** Tuned to remain within browser WebGL context limits (no canvas drops or evictions) with a circular error-boundary fallback.
+* **Direct Navbar Integration:** `#skills` navigation link smoothly scrolls directly to the 3D canvas balls section.
 
-* **Architecture:** Java 17, Spring Boot 3, Spring Security, Spring Data JPA, Hibernate, MySQL, JWT, React.
-* **Key Highlights:**
-  * Engineered secure stateless token authentication using **JWT** and **Spring Security** with Role-Based Access Control (RBAC) across Citizens, Municipal Officers, and Super Admins.
-  * Designed normalized relational database schemas in **MySQL**, leveraging Hibernate indexing and query optimization for low latency.
-  * Implemented automated grievance workflows including photo attachments, status tracking, automated department routing, and structured audit logs.
-* **Repository:** [github.com/Abu1820/CivicPulse](https://github.com/Abu1820/CivicPulse)
+### 2. 📜 Parchment Certifications Gallery with Full-Screen Lightbox
+* **Luxury Cream Parchment Theme:** Elegant double golden borders, security-line background textures, and verified seal medals.
+* **Verified Credentials:**
+  * **NPTEL Online Certification (IIT Kharagpur / Swayam):** *Introduction to Industry 4.0 and Industrial IoT* — **Elite** (Score: 80% | Assignments: 24.78/25, Exam: 55.5/75 | 19,100 candidates certified).
+  * **Infosys Springboard:** *Java Foundation Certification* (Issued: May 2, 2026).
+  * **Infosys Springboard:** *Python Foundation Certification* (Issued: June 13, 2026).
+  * **Kerala Blockchain Academy (KBA):** *Certified Blockchain Associate (CBA Online)* — LF Decentralized Trust Partner (March 30, 2026).
+  * **CodeChef Certification:** *Learn Java Course & Projects* (Certificate ID: `d71b75d`, User: `kpr24cs004`).
+* **Interactive Lightbox Modal Preview:** Clicking any certificate card opens a responsive, full-screen popup lightbox with backdrop blur (`backdrop-blur-md`), keyboard `Esc` closing, full-resolution image inspection, and direct verification links.
+
+### 3. 💼 Work Experience Timeline with Dynamic Hover Micro-Animations
+* **Interactive Timeline:** Built on a vertical timeline component tracking professional internships at **Infosys Springboard** and **MainCrafts Technology**.
+* **Hover Micro-Interactions:**
+  * **Card Lift & Neon Shadow:** Smooth `-translate-y-2` elevation with ambient `#915eff` glow.
+  * **Animated Gradient Border:** Transitions from subtle glass to vibrant multi-stop neon gradient.
+  * **Diagonal Light Sweep:** Shimmer sheen light beam sweeps across the dark glass surface on cursor hover.
+  * **Timeline Node Pulse:** Scaling and glowing ring animation around the company logo node.
+  * **Interactive Deliverable Bullets:** Glowing `✦` markers with slight slide-right hover translation.
+  * **Technology Pill Badges:** Interactive skill chips (`#Java`, `#Spring Boot`, `#RESTful APIs`, `#MySQL`, `#HTML5`, `#CSS3`, `#JavaScript`) that expand on hover.
+
+### 4. 💻 Project Showcase with 3D Spotlight & Quick-Inspect Modals
+* **Mouse-Following Spotlight:** Radial glow effect that tracks mouse coordinates across each project card.
+* **Featured Production Projects:**
+  * **🏛️ CivicPulse — Smart Municipal Governance Platform:** Full-stack civic reporting platform built with Java 17, Spring Boot 3, Spring Security, JWT authentication, Spring Data JPA, Hibernate, MySQL, and React.
+  * **⚡ Uniora — Welfare Schemes Eligibility Engine:** Seed-funded platform deployed on Cloudflare Workers (sub-50ms worldwide response) with Supabase PostgreSQL data layer and rule-based matching.
+* **Quick-Inspect Modals:** In-depth architectural breakdown modals for each project with live demo and GitHub source code links.
+
+### 5. ⚡ Hero Section & Algorithmic Excellence
+* **3D Workstation Experience:** Interactive 3D desktop PC workstation model rendered with realistic lighting and shadows.
+* **Dynamic Typewriter:** Cycles through professional roles (Java Backend Developer, Spring Boot Specialist, Competitive Programmer, Book Co-Author).
+* **Live Animated Milestone Counters:** Tracks verified achievements (400+ LeetCode problems, 9.03 CGPA, 1 Published Book, 2 Industry Internships).
+* **LeetCode Algorithmic Meters:** Topic-wise proficiency meters for Arrays, Strings, Sliding Window, Trees, and DP.
+
+### 6. 🎨 Performance, Accessibility & Polish
+* **Scroll Progress Indicator:** Sleek 3px top glowing neon reading progress bar.
+* **Circular Progress Rocket Button:** Floating back-to-top button with circular SVG scroll progress ring.
+* **Custom Cursor Follower:** Smooth spring-damped trailing glow for desktop viewports.
+* **Responsive Architecture:** Fully responsive layout with mobile drawer navigation and touch optimizations.
 
 ---
 
-### 2. ⚡ [Uniora – Welfare Schemes Eligibility Engine](https://uni-ora.uniora-official.workers.dev/dashboard/)
-> **Seed-Funded Automated Government Welfare Platform**
-
-* **Architecture:** Cloudflare Workers (Serverless Edge), Supabase (PostgreSQL), Python, Vanilla JavaScript, HTML5/CSS3.
-* **Key Highlights:**
-  * Awarded official institutional **Seed Funding** by **KPRIET Innovation Cell** for technical novelty and public social impact.
-  * Architected a rule-based eligibility matching engine that dynamically compares citizen demographic profiles against central and state welfare benefits.
-  * Deployed on **Cloudflare Workers** edge infrastructure, delivering worldwide response times under **50ms**.
-  * Configured **Supabase PostgreSQL** data tier with row-level security (RLS) policies and resilient client-side caching.
-* **Live Demo:** [uni-ora.uniora-official.workers.dev/dashboard/](https://uni-ora.uniora-official.workers.dev/dashboard/)
-
----
-
-## 📖 Published Books & Research
+## 📖 Published Literature
 
 ### 📚 [*Mastering Recommendation Systems: From Basics to Breakthroughs*](https://amzn.in/d/j7muHtb)
 * **Author:** Co-authored by **Abdul Majeed R**
 * **Publisher:** Amazon Kindle Edition
-* **ISBN / Link:** [Amazon Kindle Global Store](https://amzn.in/d/j7muHtb)
-* **Summary:** A comprehensive technical guide exploring algorithmic recommendation architectures — covering content-based filtering, matrix factorization, collaborative filtering (User-User, Item-Item), and deep neural recommendation models.
+* **Link:** [Amazon Kindle Store](https://amzn.in/d/j7muHtb)
+* **Summary:** A comprehensive technical guide exploring algorithmic recommendation architectures — covering content-based filtering, matrix factorization, collaborative filtering, and deep neural recommendation architectures.
 
 ---
 
-## 💼 Professional Experience
+## 🛠️ Complete Tech Stack
 
-| Organization | Role | Period | Key Focus |
-|---|---|---|---|
-| **Infosys Springboard** | Java Backend Development Intern (Virtual 7.0) | June 2026 – August 2026 | REST APIs, Spring Boot, Spring Security, JWT, JPA, Hibernate, MySQL |
-| **MainCrafts Technology** | Full Stack Web Development Intern | June 2026 – July 2026 | Frontend architecture, responsive UI components, LocalStorage state |
-
----
-
-## 🏆 Honours & Contest Milestones
-
-* **🥇 1st Prize — CIT CRYPTERA 2026:** First place and cash award in Technical Puzzle Clash covering Operating Systems, DBMS, and Computer Networks.
-* **🥈 2nd Prize — IEEE CodeQuest 2026:** Secured 2nd place in tournament covering Logic Sprint, HackerRank Arena, and Mystery Code.
-* **🌱 Institutional Seed Funding:** Selected and funded by KPRIET Innovation Cell for Project Uniora.
-* **⚡ 400+ LeetCode Solutions:** Maintained consistent problem-solving proficiency across fundamental and advanced data structures.
-
----
-
-## 🛠️ Tech Stack & Tools
-
-* **Languages:** Java, Python, C, JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3
-* **Backend & APIs:** Spring Boot 3, Spring MVC, RESTful APIs, Spring Data JPA, Hibernate, JWT, Spring Security
-* **Databases & Cloud:** MySQL, Supabase (PostgreSQL), Cloudflare Workers, Vercel
-* **Frontend & 3D:** React 19, Three.js, @react-three/fiber, Framer Motion, Tailwind CSS
-* **Developer Tools:** Git, GitHub, Postman, Vite, Visual Studio Code
-
----
-
-## 📂 Project Structure
-
-```
-PORTFOLIO/
-├── public/                 # Static assets, 3D GLTF models, favicons, resume.html
-│   ├── desktop_pc/         # 3D Computer GLTF model and textures
-│   ├── planet/             # 3D Earth GLTF model and textures
-│   └── resume.html         # Printable, ATS-optimized resume
-├── src/
-│   ├── assets/             # Brand logos, project banners, tech icons
-│   ├── components/
-│   │   ├── canvas/         # Three.js 3D Canvas wrappers (Computers, Earth, Stars, Balls)
-│   │   ├── about.tsx       # Overview & LeetCode DSA showcase
-│   │   ├── back-to-top.tsx # Circular progress rocket button
-│   │   ├── contact.tsx     # Direct mailto contact form & Earth canvas
-│   │   ├── custom-cursor.tsx# Smooth spring-damped cursor follower
-│   │   ├── experience.tsx  # Interactive vertical timeline
-│   │   ├── hero.tsx        # Typewriter header & animated metrics
-│   │   ├── publications.tsx# Amazon Kindle publication showcase
-│   │   ├── scroll-progress.tsx # Top glowing progress bar
-│   │   ├── tech.tsx        # 3D interactive floating canvas balls
-│   │   └── works.tsx       # Project cards with spotlight & quick-view modals
-│   ├── constants/          # Site datasets, projects, experiences, awards
-│   ├── index.css           # Tailwind CSS directives and custom animations
-│   └── app.tsx             # Main React application
-├── .npmrc                  # Peer dependency resolution config
-├── vercel.json             # Vercel SPA routing and asset serving
-└── vite.config.ts          # Vite configuration
-```
+| Category | Technologies |
+|:---|:---|
+| **Core Languages** | Java, Python, C, JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3 |
+| **Backend & APIs** | Spring Boot 3, Spring MVC, Spring Data JPA, Hibernate, JWT, Spring Security, RESTful APIs |
+| **Databases & Cloud** | MySQL, Supabase (PostgreSQL), Cloudflare Workers, Vercel |
+| **Frontend & 3D** | React 19, Three.js, @react-three/fiber, @react-three/drei, Framer Motion, Tailwind CSS |
+| **Developer Tools** | Git, GitHub, Postman, Vite, Visual Studio Code, IntelliJ IDEA |
 
 ---
 
@@ -148,7 +107,7 @@ PORTFOLIO/
 # 1. Clone the repository
 git clone https://github.com/Abu1820/Portfolio.git
 
-# 2. Enter directory
+# 2. Navigate to project root
 cd Portfolio
 
 # 3. Install dependencies
@@ -163,10 +122,10 @@ http://localhost:5173
 
 ---
 
-## 👤 Author
+## 👤 Author & Connect
 
 **Abdul Majeed R**
-* **Portfolio:** [https://portfolio-abd-e3cd.vercel.app](https://portfolio-abd-e3cd.vercel.app)
+* **Live Portfolio:** [https://abdulmajeedr-portfolio.vercel.app](https://abdulmajeedr-portfolio.vercel.app)
 * **GitHub:** [@Abu1820](https://github.com/Abu1820)
 * **LinkedIn:** [linkedin.com/in/abdulmajeedr](https://www.linkedin.com/in/abdulmajeedr/)
 * **LeetCode:** [leetcode.com/u/Abu18/](https://leetcode.com/u/Abu18/)

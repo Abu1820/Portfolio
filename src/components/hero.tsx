@@ -139,12 +139,10 @@ export const Hero = () => {
           {/* CTA Buttons */}
           <div className="mt-5 flex flex-wrap gap-3">
             <a
-              href="/resume.html?v=2"
-              target="_blank"
-              rel="noreferrer noopener"
+              href="#projects"
               className="bg-[#915eff] hover:bg-[#7b46e3] text-white font-semibold py-2.5 px-6 rounded-xl shadow-lg shadow-[#915eff]/30 transition duration-200 inline-flex items-center gap-2 text-sm"
             >
-              View Resume ↗
+              Explore Projects
             </a>
             <a
               href="#contact"
