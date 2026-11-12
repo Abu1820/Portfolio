@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { useEffect, useState } from "react";
 
@@ -26,17 +26,146 @@ const SealMedal = ({ type }: { type: "gold" | "red" | "blue" }) => {
   );
 };
 
+// Certificate Modal Preview (Lightbox)
+const CertificateModal = ({
+  cert,
+  onClose,
+}: {
+  cert: CertItem;
+  onClose: () => void;
+}) => {
+  // Close on Escape key press & lock body scroll
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [onClose]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.9, opacity: 0, y: 20 }}
+        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+        className="relative max-w-4xl w-full max-h-[92vh] flex flex-col bg-[#0f141c] border border-amber-500/40 rounded-2xl shadow-2xl overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Modal Top Header Bar */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-amber-500/20 bg-gradient-to-r from-[#171e2b] via-[#111722] to-[#171e2b]">
+          <div className="flex items-center gap-3 pr-4">
+            <span className="w-3 h-3 rounded-full bg-amber-400 animate-pulse" />
+            <div>
+              <h3 className="text-white font-bold text-sm sm:text-base tracking-wide">
+                {cert.title}
+              </h3>
+              <p className="text-[#a4b3c6] text-xs sm:text-sm italic">
+                {cert.subtitle}
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={onClose}
+            className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors text-lg font-bold shrink-0"
+            aria-label="Close Certificate Preview"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Certificate Image View */}
+        <div className="p-3 sm:p-5 overflow-auto flex-1 flex items-center justify-center bg-[#07090e]">
+          <img
+            src={cert.image}
+            alt={`${cert.title} - ${cert.subtitle}`}
+            className="max-h-[64vh] w-auto max-w-full object-contain rounded-lg shadow-2xl border border-white/10"
+          />
+        </div>
+
+        {/* Modal Action Footer */}
+        <div className="px-5 py-3.5 border-t border-amber-500/20 bg-[#111722] flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+          <div className="text-secondary">
+            <span className="font-semibold text-white/90">{cert.issuer}</span>
+            <span className="mx-2">•</span>
+            <span>{cert.date}</span>
+            {cert.credentialId && (
+              <>
+                <span className="mx-2 hidden sm:inline">•</span>
+                <span className="hidden sm:inline font-mono text-[#f3ba2f]">
+                  {cert.credentialId}
+                </span>
+              </>
+            )}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <a
+              href={cert.image}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium transition duration-150 inline-flex items-center gap-1.5"
+            >
+              <span>Full Image</span>
+              <span>↗</span>
+            </a>
+            {cert.verifyUrl && (
+              <a
+                href={cert.verifyUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold transition duration-150 inline-flex items-center gap-1.5 shadow-md shadow-amber-500/20"
+              >
+                <span>Verify Credential</span>
+                <span>↗</span>
+              </a>
+            )}
+            <button
+              onClick={onClose}
+              className="px-3 py-1.5 rounded-lg bg-gray-700/60 hover:bg-gray-700 text-white font-medium transition duration-150"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 const CertificateCard = ({
   cert,
   enableTilt,
   index,
+  onOpenModal,
 }: {
   cert: CertItem;
   enableTilt: boolean;
   index: number;
+  onOpenModal: () => void;
 }) => {
   const cardContent = (
-    <div className="relative w-full h-full p-1.5 rounded-2xl bg-gradient-to-br from-[#dfba56] via-[#c59b27] to-[#8d6917] shadow-2xl group hover:shadow-amber-500/20 transition-all duration-300">
+    <div
+      onClick={onOpenModal}
+      className="relative w-full h-full p-1.5 rounded-2xl bg-gradient-to-br from-[#dfba56] via-[#c59b27] to-[#8d6917] shadow-2xl group hover:shadow-amber-500/30 transition-all duration-300 cursor-pointer"
+    >
       {/* Inner Cream Parchment Card */}
       <div className="relative w-full h-full bg-gradient-to-br from-[#fefdfa] via-[#fbf8f0] to-[#f4eedb] rounded-[14px] p-6 sm:p-7 flex flex-col justify-between border border-[#e6cca1] overflow-hidden">
         {/* Subtle Diagonal Security Lines Texture */}
@@ -86,23 +215,25 @@ const CertificateCard = ({
           </div>
         </div>
 
+        {/* Interactive Click Prompt Pill */}
+        <div className="relative z-10 my-2 flex justify-center">
+          <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#d4af37]/20 text-[#7a5509] group-hover:bg-[#d4af37] group-hover:text-black transition-all duration-200 flex items-center gap-1.5 shadow-sm">
+            <span>🔍 Click to View Certificate</span>
+          </span>
+        </div>
+
         {/* Footer Details */}
-        <div className="relative z-10 mt-5 pt-3 border-t border-[#e2d5b8] flex flex-col items-center justify-center text-center">
+        <div className="relative z-10 pt-2 border-t border-[#e2d5b8] flex flex-col items-center justify-center text-center">
           <p className="text-[#4a4237] text-[11px] font-medium tracking-wide">
             {cert.issuer}
           </p>
           <div className="mt-1 flex items-center justify-between w-full text-[10px] text-[#6b5f4f]">
             <span>{cert.date}</span>
             {cert.verifyUrl && (
-              <a
-                href={cert.verifyUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="text-[#92600a] hover:text-[#b8860b] font-bold underline transition duration-150 inline-flex items-center gap-0.5"
-              >
-                <span>Verify</span>
-                <span>↗</span>
-              </a>
+              <span className="text-[#92600a] font-bold inline-flex items-center gap-0.5">
+                <span>Verified</span>
+                <span>✓</span>
+              </span>
             )}
           </div>
         </div>
@@ -111,16 +242,16 @@ const CertificateCard = ({
   );
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)} className="flex">
+    <motion.div variants={fadeIn("up", "spring", index * 0.25, 0.75)} className="flex">
       {enableTilt ? (
         <Tilt
-          options={{ max: 20, scale: 1.02, speed: 400, gyroscope: false }}
-          className="w-full sm:w-[350px] lg:w-[370px] min-h-[340px] flex"
+          options={{ max: 18, scale: 1.02, speed: 400, gyroscope: false }}
+          className="w-full sm:w-[350px] lg:w-[370px] min-h-[360px] flex"
         >
           {cardContent}
         </Tilt>
       ) : (
-        <div className="w-full sm:w-[350px] lg:w-[370px] min-h-[340px] flex">
+        <div className="w-full sm:w-[350px] lg:w-[370px] min-h-[360px] flex">
           {cardContent}
         </div>
       )}
@@ -129,6 +260,7 @@ const CertificateCard = ({
 };
 
 export const Certifications = () => {
+  const [selectedCert, setSelectedCert] = useState<CertItem | null>(null);
   const [enableTilt, setEnableTilt] = useState(
     () => window.matchMedia("(min-width: 768px)").matches,
   );
@@ -156,8 +288,9 @@ export const Certifications = () => {
           variants={fadeIn(undefined, undefined, 0.1, 1)}
           className="mt-3 text-secondary text-[15px] sm:text-[17px] leading-7 w-full"
         >
-          Professional certifications and online training credentials earned from premier institutions
+          Professional certifications and online credentials earned from premier institutions
           including IIT Kharagpur (NPTEL), Infosys Springboard, Kerala Blockchain Academy, and CodeChef.
+          Click any certificate to open its high-resolution verification modal.
         </motion.p>
       </div>
 
@@ -169,9 +302,20 @@ export const Certifications = () => {
             cert={cert}
             enableTilt={enableTilt}
             index={i}
+            onOpenModal={() => setSelectedCert(cert)}
           />
         ))}
       </div>
+
+      {/* Interactive Certificate Lightbox Modal */}
+      <AnimatePresence>
+        {selectedCert && (
+          <CertificateModal
+            cert={selectedCert}
+            onClose={() => setSelectedCert(null)}
+          />
+        )}
+      </AnimatePresence>
     </SectionWrapper>
   );
 };
