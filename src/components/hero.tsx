@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { ComputersCanvas } from "./canvas";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
 
@@ -103,21 +102,21 @@ const AnimatedCounter = ({
 // Hero Component
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen mx-auto touch-pan-y overflow-hidden">
+    <section className="relative w-full min-h-[85vh] sm:min-h-screen mx-auto touch-pan-y overflow-hidden flex flex-col justify-between pt-28 sm:pt-36 pb-10">
       <div
         className={cn(
           styles.paddingX,
-          "absolute inset-0 top-24 sm:top-28 max-w-7xl mx-auto flex flex-row items-start gap-5 z-10 pointer-events-none md:pointer-events-none",
+          "max-w-7xl mx-auto w-full flex flex-row items-start gap-5 z-10",
         )}
       >
         {/* Accent bar */}
-        <div className="flex flex-col justify-center items-center mt-5">
+        <div className="flex flex-col justify-center items-center mt-5 shrink-0">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 sm:h-80 h-44 violet-gradient" />
         </div>
 
         {/* Hero text */}
-        <div className="pointer-events-auto max-w-4xl">
+        <div className="max-w-4xl">
           <h1 className="font-black text-white xl:text-[68px] lg:text-[56px] sm:text-[46px] xs:text-[36px] text-[30px] xl:leading-[82px] lg:leading-[70px] sm:leading-[58px] leading-[40px] mt-2 tracking-tight">
             <span>Hi, I'm </span>
             <span className="text-[#915eff] whitespace-nowrap inline-block">
@@ -137,7 +136,7 @@ export const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-5 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="/resume.html"
               target="_blank"
@@ -165,11 +164,11 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-6 flex flex-wrap gap-4 sm:gap-6 pt-4 border-t border-white/10"
+            className="mt-8 flex flex-wrap gap-6 sm:gap-10 pt-6 border-t border-white/10"
           >
             {STATS.map((stat, i) => (
               <div key={`stat-${i}`} className="flex flex-col">
-                <span className="text-white font-extrabold text-[20px] sm:text-[24px] tracking-tight text-[#915eff]">
+                <span className="text-white font-extrabold text-[22px] sm:text-[28px] tracking-tight text-[#915eff]">
                   <AnimatedCounter
                     target={stat.target}
                     suffix={stat.suffix}
@@ -185,13 +184,10 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* 3D Computer Model */}
-      <ComputersCanvas />
-
       {/* Scroll indicator */}
-      <div className="absolute xs:bottom-10 bottom-6 w-full flex justify-center items-center z-10">
+      <div className="w-full flex justify-center items-center pt-10 pb-4 z-10">
         <a href="#about" aria-label="Scroll to About">
-          <div className="w-9 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-9 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2 hover:border-[#915eff] transition duration-200">
             <motion.div
               animate={{ y: [0, 24, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
