@@ -42,7 +42,7 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
 
   return enableTilt ? (
     <Tilt
-      options={{ max: 45, scale: 1, speed: 450 }}
+      options={{ max: 25, scale: 1.02, speed: 450 }}
       className="w-full xs:w-[220px] sm:w-[250px]"
     >
       {card}

@@ -198,7 +198,7 @@ export const Contact = () => {
           className="w-full xl:flex-[0.75] bg-black-100 p-6 sm:p-8 rounded-2xl"
         >
           <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+          <h2 className={styles.sectionHeadText}>Contact.</h2>
           <ContactForm />
         </motion.div>
 

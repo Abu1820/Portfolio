@@ -33,55 +33,49 @@ const Banner = ({ hide, setHide }: BannerProps) => {
       id="sticky-banner"
       tabIndex={-1}
       className={`${
-        hide ? "hidden" : "block"
-      } absolute h-20 top-0 left-0 z-50 flex justify-between w-full p-4 bg-primary shadow-md opacity-[0.98]`}
+        hide ? "hidden" : "flex"
+      } fixed top-0 left-0 right-0 z-30 min-h-[44px] items-center justify-between px-4 py-2 bg-[#151030]/95 backdrop-blur-md border-b border-[#915eff]/30 shadow-lg transition-all duration-300`}
     >
-      <div className="flex items-center mx-auto">
-        <p className="flex items-center text-sm font-normal text-gray-500 ">
-          <span className="inline-flex p-1 mr-3 bg-gray-200 rounded-full ">
-            <img
-              src={bulb}
-              alt="bulb"
-              height={12}
-              width={12}
-              className="text-gray-500"
-            />
-            <span className="sr-only">Light bulb</span>
-          </span>
-          <span>
-            🌱 Project <strong>Uniora</strong> was awarded official KPRIET Seed Funding! Explore the{" "}
-            <Link
-              to="https://uni-ora.uniora-official.workers.dev/dashboard/"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline font-medium text-blue-400 underline-offset-2 decoration-600 hover:text-blue-300 transition"
-            >
-              live platform
-            </Link>{" "}
-            or check out my co-authored book on{" "}
-            <Link
-              to="https://amzn.in/d/j7muHtb"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline font-medium text-orange-400 underline-offset-2 decoration-600 hover:text-orange-300 transition"
-            >
-              Amazon Kindle
-            </Link>
-            .
-          </span>
-        </p>
+      <div className="flex items-center mx-auto text-xs sm:text-sm text-[#dfd9ff]">
+        <span className="inline-flex items-center justify-center p-1 mr-2.5 bg-[#915eff]/20 rounded-full shrink-0">
+          <img
+            src={bulb}
+            alt="bulb"
+            height={14}
+            width={14}
+            className="brightness-125"
+          />
+        </span>
+        <span className="leading-snug">
+          🌱 Project <strong className="text-white font-semibold">Uniora</strong> received official KPRIET Seed Funding! Explore the{" "}
+          <Link
+            to="https://uni-ora.uniora-official.workers.dev/dashboard/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="font-semibold text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition"
+          >
+            live platform
+          </Link>{" "}
+          or view my co-authored book on{" "}
+          <Link
+            to="https://amzn.in/d/j7muHtb"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="font-semibold text-amber-400 hover:text-amber-300 underline underline-offset-2 transition"
+          >
+            Amazon Kindle
+          </Link>
+          .
+        </span>
       </div>
-      <div className="flex items-center">
-        <button
-          data-dismiss-target="#sticky-banner"
-          onClick={handleBannerClose}
-          type="button"
-          className="shrink-0 inline-flex justify-center items-center text-gray-400 hover:bg-gray-800 rounded-lg text-sm p-1.5 "
-        >
-          <img src={close} alt="close" height={12} width={12} />
-          <span className="sr-only">Close banner</span>
-        </button>
-      </div>
+      <button
+        onClick={handleBannerClose}
+        type="button"
+        aria-label="Close banner"
+        className="shrink-0 ml-2 inline-flex items-center justify-center text-secondary hover:text-white hover:bg-white/10 rounded-lg p-1.5 transition"
+      >
+        <img src={close} alt="close" height={14} width={14} className="opacity-70 hover:opacity-100" />
+      </button>
     </div>
   );
 };

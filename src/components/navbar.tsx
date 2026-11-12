@@ -47,10 +47,11 @@ export const Navbar = ({ hide }: NavbarProps) => {
     <nav
       className={cn(
         styles.paddingX,
-        "w-full flex items-center py-4 fixed top-0 z-20 transition-all duration-300",
+        "w-full flex items-center py-4 fixed z-20 transition-all duration-300",
+        !hide ? "top-[48px] sm:top-[44px]" : "top-0",
         scrolled || hide
-          ? "bg-primary/95 backdrop-blur-md shadow-lg shadow-black/20 mt-0"
-          : "bg-transparent mt-0",
+          ? "bg-primary/95 backdrop-blur-md shadow-lg shadow-black/20"
+          : "bg-transparent",
       )}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">

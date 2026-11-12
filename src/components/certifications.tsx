@@ -166,25 +166,25 @@ const CertificateCard = ({
       onClick={onOpenModal}
       className="relative w-full h-full p-1.5 rounded-2xl bg-gradient-to-br from-[#dfba56] via-[#c59b27] to-[#8d6917] shadow-2xl group hover:shadow-amber-500/30 transition-all duration-300 cursor-pointer"
     >
-      {/* Inner Cream Parchment Card */}
-      <div className="relative w-full h-full bg-gradient-to-br from-[#fefdfa] via-[#fbf8f0] to-[#f4eedb] rounded-[14px] p-6 sm:p-7 flex flex-col justify-between border border-[#e6cca1] overflow-hidden">
+      {/* Inner Dark Glassmorphic Prestigious Card */}
+      <div className="relative w-full h-full bg-gradient-to-br from-[#181335] via-[#151030] to-[#0d0a20] rounded-[14px] p-6 sm:p-7 flex flex-col justify-between border border-[#d4af37]/30 overflow-hidden shadow-inner">
         {/* Subtle Diagonal Security Lines Texture */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.04]"
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 10px)",
+              "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 10px)",
           }}
         />
 
         {/* Golden Inner Frame */}
-        <div className="pointer-events-none absolute inset-2.5 rounded-lg border border-[#d4af37]/40" />
+        <div className="pointer-events-none absolute inset-2.5 rounded-lg border border-[#d4af37]/25" />
 
         {/* Decorative Corner Accents */}
-        <div className="pointer-events-none absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#b8860b]" />
-        <div className="pointer-events-none absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-[#b8860b]" />
-        <div className="pointer-events-none absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-[#b8860b]" />
-        <div className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-[#b8860b]" />
+        <div className="pointer-events-none absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-[#d4af37]/70" />
+        <div className="pointer-events-none absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-[#d4af37]/70" />
+        <div className="pointer-events-none absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-[#d4af37]/70" />
+        <div className="pointer-events-none absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-[#d4af37]/70" />
 
         {/* Seal Medal */}
         <SealMedal type={cert.badgeType} />
@@ -192,24 +192,24 @@ const CertificateCard = ({
         {/* Certificate Content */}
         <div className="relative z-10 pt-2 text-center">
           {/* Certificate Main Title */}
-          <h3 className="text-[#1a1a1a] font-black text-[16px] sm:text-[18px] tracking-[0.12em] uppercase font-serif">
+          <h3 className="text-white font-extrabold text-[16px] sm:text-[18px] tracking-[0.08em] uppercase group-hover:text-amber-300 transition duration-200">
             {cert.title}
           </h3>
 
           {/* Golden Separator */}
-          <div className="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#c59b27] to-transparent mx-auto my-3" />
+          <div className="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto my-3" />
 
           {/* Topic / Course Name */}
-          <p className="text-[#2b251e] italic text-[14px] sm:text-[15px] font-serif leading-relaxed px-2 min-h-[46px] flex items-center justify-center">
+          <p className="text-[#dfd9ff] italic text-[14px] sm:text-[15px] leading-relaxed px-2 min-h-[46px] flex items-center justify-center">
             "{cert.subtitle}"
           </p>
 
           {/* Score & Distinction */}
-          <div className="mt-4 pt-3 border-t border-[#e2d5b8]">
-            <p className="text-[#1a1a1a] font-bold text-[13px] tracking-wide">
+          <div className="mt-4 pt-3 border-t border-[#d4af37]/20">
+            <p className="text-white font-bold text-[13px] tracking-wide">
               {cert.score}
             </p>
-            <p className="text-[#107c41] font-extrabold text-[12px] tracking-wider mt-0.5">
+            <p className="text-[#2af598] font-extrabold text-[12px] tracking-wider mt-0.5">
               {cert.grade}
             </p>
           </div>
@@ -217,20 +217,20 @@ const CertificateCard = ({
 
         {/* Interactive Click Prompt Pill */}
         <div className="relative z-10 my-2 flex justify-center">
-          <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#d4af37]/20 text-[#7a5509] group-hover:bg-[#d4af37] group-hover:text-black transition-all duration-200 flex items-center gap-1.5 shadow-sm">
+          <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-[#d4af37]/15 text-amber-300 border border-[#d4af37]/30 group-hover:bg-[#d4af37] group-hover:text-black transition-all duration-200 flex items-center gap-1.5 shadow-sm">
             <span>🔍 Click to View Certificate</span>
           </span>
         </div>
 
         {/* Footer Details */}
-        <div className="relative z-10 pt-2 border-t border-[#e2d5b8] flex flex-col items-center justify-center text-center">
-          <p className="text-[#4a4237] text-[11px] font-medium tracking-wide">
+        <div className="relative z-10 pt-2 border-t border-[#d4af37]/20 flex flex-col items-center justify-center text-center">
+          <p className="text-secondary text-[11px] font-medium tracking-wide">
             {cert.issuer}
           </p>
-          <div className="mt-1 flex items-center justify-between w-full text-[10px] text-[#6b5f4f]">
+          <div className="mt-1 flex items-center justify-between w-full text-[10px] text-secondary/80">
             <span>{cert.date}</span>
             {cert.verifyUrl && (
-              <span className="text-[#92600a] font-bold inline-flex items-center gap-0.5">
+              <span className="text-amber-400 font-bold inline-flex items-center gap-0.5">
                 <span>Verified</span>
                 <span>✓</span>
               </span>
