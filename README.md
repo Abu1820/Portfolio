@@ -16,7 +16,6 @@
 <br />
 
 🌐 **Live Portfolio:** [https://abdulmajeedr-portfolio.vercel.app](https://abdulmajeedr-portfolio.vercel.app)  
-📄 **ATS-Optimized Resume:** [https://abdulmajeedr-portfolio.vercel.app/resume.html](https://abdulmajeedr-portfolio.vercel.app/resume.html)  
 📫 **Contact:** [abdulmajeed564600@gmail.com](mailto:abdulmajeed564600@gmail.com)
 
 </div>
