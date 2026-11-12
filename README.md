@@ -62,7 +62,7 @@ The application merges real-time WebGL 3D graphics and Framer Motion micro-inter
 * **Mouse-Following Spotlight:** Radial glow effect that tracks mouse coordinates across each project card.
 * **Featured Production Projects:**
   * **🏛️ CivicPulse — Smart Municipal Governance Platform:** Full-stack civic reporting platform built with Java 17, Spring Boot 3, Spring Security, JWT authentication, Spring Data JPA, Hibernate, MySQL, and React.
-  * **⚡ Uniora — Welfare Schemes Eligibility Engine:** Seed-funded platform deployed on Cloudflare Workers (sub-50ms worldwide response) with Supabase PostgreSQL data layer and rule-based matching.
+  * **⚡ Uniora — Welfare Schemes Eligibility Engine:** Seed-funded platform deployed on Cloudflare Workers ([GitHub: Abu1820/UNIORA](https://github.com/Abu1820/UNIORA) | [Live Demo](https://uni-ora.uniora-official.workers.dev/dashboard/)) with Supabase PostgreSQL data layer and rule-based matching.
 * **Quick-Inspect Modals:** In-depth architectural breakdown modals for each project with live demo and GitHub source code links.
 
 ### 5. ⚡ Hero Section & Algorithmic Excellence

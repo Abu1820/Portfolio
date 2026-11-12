@@ -293,7 +293,7 @@ export const PROJECTS = [
       },
     ],
     image: uniora,
-    source_code_link: "https://uni-ora.uniora-official.workers.dev/dashboard/",
+    source_code_link: "https://github.com/Abu1820/UNIORA",
     live_site_link: "https://uni-ora.uniora-official.workers.dev/dashboard/",
   },
 ] as const;
