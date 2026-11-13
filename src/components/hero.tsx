@@ -102,7 +102,7 @@ const AnimatedCounter = ({
 // Hero Component
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[85vh] sm:min-h-screen mx-auto touch-pan-y overflow-hidden flex flex-col justify-between pt-28 sm:pt-36 pb-10">
+    <section className="relative w-full min-h-[80vh] sm:min-h-[88vh] mx-auto touch-pan-y overflow-hidden flex flex-col justify-center pt-24 sm:pt-32 pb-16">
       <div
         className={cn(
           styles.paddingX,
@@ -182,19 +182,6 @@ export const Hero = () => {
             ))}
           </motion.div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="w-full flex justify-center items-center pt-10 pb-4 z-10">
-        <a href="#about" aria-label="Scroll to About">
-          <div className="w-9 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2 hover:border-[#915eff] transition duration-200">
-            <motion.div
-              animate={{ y: [0, 24, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
       </div>
     </section>
   );
