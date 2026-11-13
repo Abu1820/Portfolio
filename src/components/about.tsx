@@ -190,8 +190,8 @@ export const About = () => {
           foundation in Java, Spring Boot, MySQL, REST APIs, and Data Structures &amp; Algorithms.
           With 400+ problems solved on LeetCode and virtual internships at Infosys Springboard and
           MainCrafts Technology, I specialize in building secure, scalable backend architectures,
-          full-stack platforms like CivicPulse and Uniora, and co-authoring publications in AI &amp;
-          recommendation systems.
+          full-stack platforms like CivicPulse and Uniora, and co-authoring a technical book
+          published on Amazon Kindle.
         </motion.p>
 
         {/* Service Cards */}

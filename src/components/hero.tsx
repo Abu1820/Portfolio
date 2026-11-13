@@ -9,7 +9,7 @@ const ROLES = [
   "Spring Boot & REST API Specialist",
   "Competitive Programmer (400+ LeetCode)",
   "Seed-Funded System Creator",
-  "AI Recommendation Systems Co-Author",
+  "Published Book Co-Author",
 ];
 
 const STATS = [

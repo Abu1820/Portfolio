@@ -98,7 +98,7 @@ export const SERVICES = [
     icon: creator,
   },
   {
-    title: "Book Co-Author & AI Systems",
+    title: "Published Book Co-Author",
     icon: mobile,
   },
 ] as const;
