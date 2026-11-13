@@ -90,11 +90,11 @@ const DsaShowcase = () => {
             href="https://leetcode.com/u/Abu18/"
             target="_blank"
             rel="noreferrer noopener"
-            className="bg-[#050816] hover:bg-[#915eff] text-white border border-[#915eff]/40 hover:border-transparent font-bold py-2.5 px-5 rounded-xl shadow-lg transition duration-200 inline-flex items-center gap-2 text-sm whitespace-nowrap min-h-0 min-w-0"
+            className="w-full sm:w-auto bg-[#050816] hover:bg-[#915eff] text-white border border-[#915eff]/40 hover:border-transparent font-bold py-2.5 px-4 sm:px-5 rounded-xl shadow-lg transition duration-200 inline-flex items-center justify-center gap-2 text-xs sm:text-sm max-w-full text-center flex-shrink-0"
           >
-            <span className="text-amber-400 font-extrabold">⬡</span>
-            <span>View LeetCode Profile (@Abu18)</span>
-            <span>↗</span>
+            <span className="text-amber-400 font-extrabold flex-shrink-0">⬡</span>
+            <span className="truncate">View LeetCode Profile (@Abu18)</span>
+            <span className="flex-shrink-0">↗</span>
           </a>
         </div>
 

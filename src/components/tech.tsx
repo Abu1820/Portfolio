@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 import { BallCanvas } from "./canvas";
 import { TECHNOLOGIES } from "../constants";
 import { SectionWrapper } from "../hoc";
+import { useInView } from "../hooks/use-in-view";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
 
 export const Tech = () => {
+  const { ref, isInView } = useInView({ rootMargin: "300px" });
+
   return (
     <SectionWrapper idName="skills">
       {/* Section Header */}
@@ -16,7 +19,8 @@ export const Tech = () => {
       </motion.div>
 
       <div
-        className="flex flex-row flex-wrap justify-center gap-6 xs:gap-8 sm:gap-10"
+        ref={ref}
+        className="flex flex-row flex-wrap justify-center gap-6 xs:gap-8 sm:gap-10 min-h-[300px]"
       >
         {TECHNOLOGIES.map((technology) => (
           <div
@@ -25,7 +29,9 @@ export const Tech = () => {
           >
             {/* 3D Ball Canvas rendered on all screen sizes & mobile */}
             <div className="tech-ball-wrapper w-24 h-24 xs:w-28 xs:h-28 rounded-full overflow-hidden flex items-center justify-center">
-              <BallCanvas icon={technology.icon} name={technology.name} />
+              {isInView && (
+                <BallCanvas icon={technology.icon} name={technology.name} />
+              )}
             </div>
 
             {/* Tech Name */}
