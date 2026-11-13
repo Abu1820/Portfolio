@@ -52,9 +52,9 @@ const Typewriter = () => {
   }, [displayText, isDeleting, roleIndex]);
 
   return (
-    <span className="inline-flex items-center text-[#915eff] font-semibold">
+    <span className="text-[#915eff] font-semibold inline">
       <span>{displayText}</span>
-      <span className="w-0.5 h-5 bg-[#915eff] ml-1 animate-pulse" />
+      <span className="inline-block w-0.5 h-[1.1em] bg-[#915eff] ml-1 animate-pulse align-middle" />
     </span>
   );
 };
@@ -117,7 +117,7 @@ export const Hero = () => {
 
         {/* Hero text */}
         <div className="max-w-4xl">
-          <h1 className="font-black text-white xl:text-[68px] lg:text-[56px] sm:text-[46px] xs:text-[36px] text-[30px] xl:leading-[82px] lg:leading-[70px] sm:leading-[58px] leading-[40px] mt-2 tracking-tight">
+          <h1 className="font-black text-white xl:text-[68px] lg:text-[56px] sm:text-[46px] xs:text-[34px] text-[26px] xl:leading-[82px] lg:leading-[70px] sm:leading-[58px] xs:leading-[42px] leading-[34px] mt-2 tracking-tight">
             <span>Hi, I'm </span>
             <span className="text-[#915eff] whitespace-nowrap inline-block">
               Abdul Majeed R
@@ -125,8 +125,8 @@ export const Hero = () => {
           </h1>
 
           {/* Dynamic Typewriter Subtitle */}
-          <div className="mt-2 text-[18px] sm:text-[24px] font-medium text-white-100 min-h-[32px] sm:min-h-[36px] flex items-center">
-            <span className="text-secondary mr-2">I am a</span>
+          <div className="mt-2 text-[15px] xs:text-[18px] sm:text-[24px] font-medium text-white-100 min-h-[44px] xs:min-h-[40px] sm:min-h-[36px] leading-snug sm:leading-normal">
+            <span className="text-secondary mr-1.5 whitespace-nowrap">I am a</span>
             <Typewriter />
           </div>
 
