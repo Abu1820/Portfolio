@@ -234,8 +234,8 @@ export const PROJECTS = [
   {
     name: "CivicPulse – Smart Governance",
     category: "Java & Full Stack",
-    isLive: false,
-    status: "Open Source Platform",
+    isLive: true,
+    status: "Live Production Platform",
     description:
       "Full-stack civic reporting platform enabling citizens to report and track municipal issues like potholes and drainage. Built with Spring Boot, JWT security, Hibernate, MySQL, and React.",
     highlights: [
@@ -263,8 +263,8 @@ export const PROJECTS = [
       },
     ],
     image: civicpulse,
-    source_code_link: "https://github.com/Abu1820/CivicPulse",
-    live_site_link: "https://github.com/Abu1820/CivicPulse",
+    source_code_link: "https://github.com/Abu1820/CivicPulse-Smart-Governance-Platform",
+    live_site_link: "https://civic-pulse-smart-governance-platform.vercel.app/",
   },
   {
     name: "Uniora – Welfare Schemes Platform",
