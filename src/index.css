@@ -290,6 +290,11 @@ canvas {
   display: block;
 }
 
+/* Tech balls: touch-action for smooth 3D orbit controls */
+.tech-ball-wrapper canvas {
+  touch-action: none !important;
+}
+
 /* Tech balls responsive: smaller on mobile */
 @media (max-width: 479px) {
   .tech-ball-wrapper {

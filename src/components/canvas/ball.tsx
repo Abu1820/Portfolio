@@ -98,7 +98,7 @@ export const BallCanvas = ({ icon, name = "tech" }: BallCanvasProps) => {
     <CanvasErrorBoundary fallback={fallbackBall}>
       <Canvas
         frameloop="demand"
-        dpr={[1, 2]}
+        dpr={[1, 1.5]}
         gl={{ preserveDrawingBuffer: true, powerPreference: "default" }}
         className="w-full h-full rounded-full"
       >
