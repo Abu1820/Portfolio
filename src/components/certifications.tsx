@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { CERTIFICATIONS } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -34,28 +35,33 @@ const CertificateModal = ({
   cert: CertItem;
   onClose: () => void;
 }) => {
-  // Close on Escape key press & lock body scroll
+  // Close on Escape key press & lock body scroll without layout shift
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handleKeyDown);
     const originalOverflow = document.body.style.overflow;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = "";
     };
   }, [onClose]);
 
-  return (
+  return createPortal(
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -65,7 +71,7 @@ const CertificateModal = ({
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className="relative max-w-4xl w-full max-h-[92vh] flex flex-col bg-[#0f141c] border border-amber-500/40 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative max-w-4xl w-full max-h-[92vh] flex flex-col bg-[#0f141c] border border-amber-500/40 rounded-2xl shadow-2xl overflow-hidden my-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Header Bar */}
@@ -146,7 +152,8 @@ const CertificateModal = ({
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body
   );
 };
 
