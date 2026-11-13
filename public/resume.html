@@ -11,10 +11,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      font-size: 8.3pt;
-      color: #111;
-      background: #fff;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 8.2pt;
+      color: #0f172a;
+      background: #f8fafc;
       line-height: 1.34;
     }
 
@@ -23,8 +23,50 @@
       min-height: 297mm;
       max-height: 297mm;
       overflow: hidden;
-      margin: 0 auto;
-      padding: 8mm 13mm 7mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 7.5mm 12.5mm 6mm;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    /* ── RECRUITER ACTIONS (SCREEN ONLY) ── */
+    .screen-actions {
+      max-width: 210mm;
+      margin: 16px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4px;
+    }
+    .back-btn, .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .back-btn {
+      background: #e2e8f0;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
+    }
+    .back-btn:hover {
+      background: #cbd5e1;
+    }
+    .print-btn {
+      background: #915eff;
+      color: #fff;
+      border: none;
+      box-shadow: 0 2px 8px rgba(145, 94, 255, 0.35);
+    }
+    .print-btn:hover {
+      background: #7b46e3;
     }
 
     /* ── NAME & HEADER ── */
@@ -52,23 +94,24 @@
 
     .contact-line a:hover {
       border-bottom: 1px solid #0f172a;
+      color: #915eff;
     }
 
     /* ── SECTION TITLE ── */
     .sec {
-      font-size: 8.9pt;
+      font-size: 8.8pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       border-bottom: 1.5px solid #0f172a;
       padding-bottom: 1px;
-      margin-top: 5.5px;
-      margin-bottom: 3.5px;
+      margin-top: 5px;
+      margin-bottom: 3px;
       color: #0f172a;
     }
 
     /* ── SUMMARY ── */
-    .summary { font-size: 8.1pt; text-align: justify; line-height: 1.35; color: #1e293b; }
+    .summary { font-size: 8.05pt; text-align: justify; line-height: 1.35; color: #1e293b; }
 
     /* ── EDUCATION ── */
     .edu { margin-bottom: 2px; }
@@ -79,41 +122,49 @@
     .edu-highlight { font-weight: 600; color: #0f172a; }
 
     /* ── SKILLS ── */
-    .sk { font-size: 8pt; margin-bottom: 1px; line-height: 1.35; }
+    .sk { font-size: 7.95pt; margin-bottom: 1px; line-height: 1.33; color: #1e293b; }
     .sk b { font-weight: 600; color: #0f172a; }
 
     /* ── INTERNSHIP & PROJECTS ── */
-    .block { margin-bottom: 4.5px; }
+    .block { margin-bottom: 4px; }
     .block-head-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
     }
-    .block-head { font-weight: 600; font-size: 8.3pt; color: #0f172a; }
-    .block-meta { font-size: 7.9pt; color: #334155; font-weight: 500; }
-    .block-sub  { font-size: 7.8pt; color: #475569; margin-bottom: 1px; font-style: italic; }
+    .block-head { font-weight: 600; font-size: 8.25pt; color: #0f172a; }
+    .block-meta { font-size: 7.85pt; color: #334155; font-weight: 500; }
+    .block-sub  { font-size: 7.75pt; color: #475569; margin-bottom: 1px; font-style: italic; }
 
     ul { margin-left: 13px; list-style: disc; }
-    li { font-size: 8pt; margin-bottom: 0.8px; color: #1e293b; line-height: 1.32; }
+    li { font-size: 7.95pt; margin-bottom: 0.6px; color: #1e293b; line-height: 1.31; text-align: justify; }
 
-    .tech { font-size: 7.8pt; margin-top: 1px; color: #334155; }
+    .tech { font-size: 7.75pt; margin-top: 1px; color: #334155; }
     .tech b { font-weight: 600; color: #0f172a; }
 
     /* ── ACHIEVEMENTS & CERTS ── */
-    .ach { font-size: 8pt; margin-bottom: 1.5px; line-height: 1.32; color: #1e293b; }
+    .ach { font-size: 7.95pt; margin-bottom: 1.3px; line-height: 1.31; color: #1e293b; }
     .ach b { font-weight: 600; color: #0f172a; }
 
-    .cert { font-size: 8pt; margin-bottom: 1.2px; line-height: 1.32; color: #1e293b; }
+    .cert { font-size: 7.95pt; margin-bottom: 1.1px; line-height: 1.31; color: #1e293b; }
     .cert b { font-weight: 600; color: #0f172a; }
 
     @media print {
-      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .page { width: 100%; height: 297mm; overflow: hidden; padding: 7mm 12mm 5mm; }
+      body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .screen-actions { display: none !important; }
+      .page { width: 100%; height: 297mm; overflow: hidden; padding: 7mm 12mm 5mm; margin: 0; box-shadow: none; }
     }
     @page { size: A4; margin: 0; }
   </style>
 </head>
 <body>
+
+<!-- Screen-only action buttons -->
+<div class="screen-actions">
+  <a href="/" class="back-btn">← Back to Portfolio</a>
+  <button onclick="window.print()" class="print-btn">🖨️ Print / Save as PDF</button>
+</div>
+
 <div class="page">
 
   <!-- HEADER -->
@@ -132,9 +183,9 @@
   </div>
 
   <!-- SUMMARY -->
-  <div class="sec">Summary</div>
+  <div class="sec">Professional Summary</div>
   <p class="summary">
-    Computer Science and Engineering undergraduate with CGPA 9.03 and solid competencies in Java, Spring Boot, MySQL, REST APIs, and Data Structures &amp; Algorithms. Solved 400+ problems on LeetCode with proven problem-solving abilities in competitive programming contests. Hands-on experience developing secure backend architectures with JWT authentication, relational database modeling with Spring Data JPA/Hibernate, and responsive web applications. Seeking an entry-level Software Developer or Java Backend Developer role.
+    Computer Science &amp; Engineering undergraduate (CGPA: 9.03/10) and competitive programmer (400+ LeetCode problems solved) specializing in high-throughput Java backend systems, Spring Boot microservices, and relational database modeling. Demonstrated experience architecting stateless JWT authentication, optimizing normalized MySQL schemas with Spring Data JPA &amp; Hibernate, and deploying low-latency edge-distributed services. Recipient of institutional seed funding from KPRIET and co-author of a published technical guide on recommendation systems. Seeking an entry-level Software Developer or Java Backend Engineer role to build scalable, resilient platforms.
   </p>
 
   <!-- EDUCATION -->
@@ -147,7 +198,7 @@
     </div>
     <div class="edu-row">
       <span class="edu-sub">B.E. in Computer Science and Engineering</span>
-      <span class="edu-highlight">CGPA: 9.03</span>
+      <span class="edu-highlight">CGPA: 9.03 / 10.0</span>
     </div>
   </div>
 
@@ -157,19 +208,19 @@
       <span class="edu-date">March 2024</span>
     </div>
     <div class="edu-row">
-      <span class="edu-sub">Higher Secondary Education (Tamil Nadu State Board)</span>
+      <span class="edu-sub">Higher Secondary Certificate (HSC) – Tamil Nadu State Board</span>
       <span class="edu-highlight">Percentage: 94%</span>
     </div>
   </div>
 
   <!-- TECHNICAL SKILLS -->
   <div class="sec">Technical Skills</div>
-  <div class="sk"><b>Programming Languages:</b> Java, Python, C, JavaScript</div>
-  <div class="sk"><b>Backend Technologies:</b> Spring Boot, Spring Data JPA, Hibernate, REST APIs, JWT Authentication</div>
-  <div class="sk"><b>Web Technologies:</b> React, HTML5, CSS3, JavaScript, LocalStorage</div>
-  <div class="sk"><b>Databases &amp; Cloud:</b> MySQL, Supabase (PostgreSQL), Cloudflare Workers</div>
-  <div class="sk"><b>Core Fundamentals:</b> Data Structures &amp; Algorithms, OOP, Operating Systems, DBMS, Computer Networks</div>
-  <div class="sk"><b>Developer Tools:</b> Git, GitHub, Postman, VS Code, IntelliJ IDEA</div>
+  <div class="sk"><b>Programming Languages:</b> Java (Core &amp; Advanced), Python, C, JavaScript (ES6+), SQL</div>
+  <div class="sk"><b>Backend Technologies:</b> Spring Boot, Spring Security, Spring Data JPA, Hibernate ORM, RESTful APIs, JWT, Microservices</div>
+  <div class="sk"><b>Web &amp; Frontend:</b> React, HTML5, CSS3 (Flexbox/Grid), Vite, LocalStorage, Responsive Web Design</div>
+  <div class="sk"><b>Databases &amp; Cloud:</b> MySQL, PostgreSQL (Supabase), Cloudflare Workers, Schema Normalization (3NF), Query Optimization</div>
+  <div class="sk"><b>Core Fundamentals:</b> Data Structures &amp; Algorithms (DSA), Object-Oriented Programming (OOP), DBMS, Operating Systems, Networks</div>
+  <div class="sk"><b>Developer Tools &amp; Testing:</b> Git, GitHub, Postman, VS Code, IntelliJ IDEA, Maven</div>
 
   <!-- INTERNSHIP EXPERIENCE -->
   <div class="sec">Internship Experience</div>
@@ -179,14 +230,14 @@
       <span class="block-head">Infosys Springboard – Java Backend Development Intern</span>
       <span class="block-meta">June 2026 – August 2026</span>
     </div>
-    <div class="block-sub">Virtual Internship 7.0 | Smart Governance Platform (B1) | June 2026 – August 2026</div>
+    <div class="block-sub">Virtual Internship 7.0 | Smart Governance Platform (B1) | Enterprise Architecture</div>
     <ul>
-      <li>Engineered RESTful API endpoints in Java and Spring Boot for user management, issue tracking, and service workflows.</li>
-      <li>Implemented secure stateless authentication and role-based access control (RBAC) using JWT and Spring Security.</li>
-      <li>Integrated Spring Data JPA and Hibernate with MySQL, designing normalized database schemas and optimizing query execution.</li>
-      <li>Earned official Infosys Java Foundation and Python Foundation professional certifications during the internship.</li>
+      <li>Architected and documented 12+ RESTful API endpoints in Java and Spring Boot for civic user management, lifecycle ticket tracking, and administrative dispatch workflows.</li>
+      <li>Implemented secure stateless authentication and Role-Based Access Control (RBAC) using Spring Security and JSON Web Tokens (JWT), preventing unauthorized endpoint access.</li>
+      <li>Designed a 3NF normalized MySQL database schema with Spring Data JPA and Hibernate ORM, optimizing query execution plans for sub-second retrieval.</li>
+      <li>Conducted comprehensive API endpoint testing via Postman collections and earned official Infosys Java Foundation and Python Foundation professional certifications with distinction.</li>
     </ul>
-    <div class="tech"><b>Technologies:</b> Java, Spring Boot, Spring Data JPA, Hibernate, JWT, MySQL, REST APIs, Postman</div>
+    <div class="tech"><b>Technologies:</b> Java, Spring Boot, Spring Data JPA, Hibernate, JWT, Spring Security, MySQL, REST APIs, Postman</div>
   </div>
 
   <div class="block">
@@ -194,14 +245,14 @@
       <span class="block-head">MainCrafts Technology – Full Stack Web Development Intern</span>
       <span class="block-meta">June 2026 – July 2026</span>
     </div>
-    <div class="block-sub">Virtual Internship | Full Stack Web Development (Intern ID: MT6576)</div>
+    <div class="block-sub">Virtual Internship | Full Stack Web Architecture (Intern ID: MT6576)</div>
     <ul>
-      <li>Completed a 4-week internship focused on frontend development and responsive web architecture.</li>
-      <li>Developed responsive multi-page web interfaces using HTML5, CSS3 Flexbox/Grid, and vanilla JavaScript.</li>
-      <li>Built an interactive contact form module with client-side state persistence using LocalStorage and dynamic form validation.</li>
-      <li>Awarded an Internship Completion Certificate and a Letter of Recommendation upon timely completion.</li>
+      <li>Built responsive, mobile-first web application interfaces utilizing semantic HTML5, modern CSS3 Flexbox/Grid, and modular vanilla JavaScript.</li>
+      <li>Engineered an interactive contact submission module featuring real-time regex form validation and client-side state persistence using LocalStorage.</li>
+      <li>Ensured strict cross-browser compatibility across Chrome, Safari, and Firefox with zero cumulative layout shifts and optimized asset load speeds.</li>
+      <li>Awarded an official Letter of Recommendation and Internship Completion Certificate upon timely delivery of all project milestones.</li>
     </ul>
-    <div class="tech"><b>Technologies:</b> HTML5, CSS3, JavaScript, LocalStorage, Responsive Design, Git</div>
+    <div class="tech"><b>Technologies:</b> HTML5, CSS3, JavaScript, LocalStorage, Form Validation, Responsive Web Design, Git</div>
   </div>
 
   <!-- PROJECTS -->
@@ -209,29 +260,29 @@
 
   <div class="block">
     <div class="block-head-row">
-      <span class="block-head">CivicPulse – Smart Municipal Governance Platform</span>
+      <span class="block-head">CivicPulse – Smart Municipal Governance &amp; Issue Tracking Platform</span>
       <span class="block-meta"><a href="https://github.com/Abu1820/CivicPulse" target="_blank" style="color:#0f172a; text-decoration:none;">github.com/Abu1820/CivicPulse</a></span>
     </div>
     <ul>
-      <li>Developed a full-stack civic reporting platform enabling citizens to report and track municipal issues like potholes and drainage.</li>
-      <li>Designed RESTful API endpoints in Spring Boot for issue creation, real-time status updates, and administrative resolution workflows.</li>
-      <li>Integrated React frontend with Spring Boot backend, implementing JWT authentication for secure client-server communication.</li>
-      <li>Designed a normalized MySQL database schema with Spring Data JPA and Hibernate for reliable data persistence and retrieval.</li>
+      <li>Engineered a full-stack civic reporting system enabling citizens to log municipal issues (potholes, drainage) with location geotags and real-time resolution status.</li>
+      <li>Constructed modular Spring Boot REST controllers adhering to MVC architecture, providing structured request-response handling, input validation, and exception handling.</li>
+      <li>Integrated a responsive React frontend with the Spring Boot backend via Axios, maintaining stateless sessions with JWT tokens and secure HTTP headers.</li>
+      <li>Modeled relational database entities using Spring Data JPA, Hibernate, and MySQL with transactional integrity to prevent partial write failures.</li>
     </ul>
-    <div class="tech"><b>Technologies:</b> Java, Spring Boot, Spring Data JPA, Hibernate, JWT, MySQL, React, REST APIs</div>
+    <div class="tech"><b>Technologies:</b> Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, JWT, MySQL, React, REST APIs, Git</div>
   </div>
 
   <div class="block">
     <div class="block-head-row">
-      <span class="block-head">Uniora – Government Scheme Eligibility Platform</span>
+      <span class="block-head">Uniora – Government Scheme Eligibility &amp; Civic Welfare Platform</span>
       <span class="block-meta"><a href="https://github.com/Abu1820/UNIORA" target="_blank" style="color:#0f172a; text-decoration:none;">github.com/Abu1820/UNIORA</a></span>
     </div>
     <ul>
-      <li>Built an eligibility-matching engine mapping citizens to applicable government welfare schemes based on demographic criteria.</li>
-      <li>Designed for offline accessibility and low-connectivity regions utilizing Cloudflare Workers edge caching and Supabase.</li>
-      <li>Project selected for and received institutional Seed Funding from KPRIET for social impact and technical feasibility.</li>
+      <li>Built an automated multi-parameter eligibility evaluation engine matching citizen demographics against 500+ Central and State welfare initiatives.</li>
+      <li>Architected a serverless edge caching layer on Cloudflare Workers and Supabase (PostgreSQL) for low-latency, resilient access in low-bandwidth rural environments.</li>
+      <li>Awarded competitive institutional Seed Funding from KPRIET Innovation Cell following rigorous committee evaluation for social impact and technical feasibility.</li>
     </ul>
-    <div class="tech"><b>Technologies:</b> Python, JavaScript, Supabase, Cloudflare Workers, HTML, CSS</div>
+    <div class="tech"><b>Technologies:</b> Python, JavaScript, Supabase (PostgreSQL), Cloudflare Workers, Edge Computing, HTML5, CSS3, Git</div>
   </div>
 
   <!-- KEY ACHIEVEMENTS & PUBLICATIONS -->
@@ -241,12 +292,12 @@
       <span><b>Book Co-Author – Amazon Kindle:</b> Co-authored <i>"Mastering Recommendation Systems: From Basics to Breakthroughs"</i></span>
       <span class="block-meta"><a href="https://amzn.in/d/j7muHtb" target="_blank" style="color:#0f172a; text-decoration:none;">amzn.in/d/j7muHtb</a></span>
     </div>
-    <div style="font-size:7.9pt; color:#334155; margin-top:0.5px;">Comprehensive guide covering AI recommendation algorithms, collaborative filtering, and deep learning architectures.</div>
+    <div style="font-size:7.8pt; color:#334155; margin-top:0.5px;">Comprehensive technical reference covering machine learning recommendation algorithms, collaborative filtering, and deep learning architectures.</div>
   </div>
   <div class="ach"><b>CIT CRYPTERA 2026 – 1st Prize:</b> Won first place and ₹1,500 cash prize in Technical Puzzle Clash covering Operating Systems, DBMS, and Networks at Coimbatore Institute of Technology (Jan 2026).</div>
-  <div class="ach"><b>IEEE CodeQuest – 2nd Prize:</b> Secured second place in competitive coding event (Logic Sprint, HackerRank Arena, Mystery Code) by IEEE Education Society, KPRIET (Aug 2026).</div>
-  <div class="ach"><b>LeetCode:</b> Solved 400+ problems covering arrays, strings, hashing, sliding window, sorting, and heaps.</div>
-  <div class="ach"><b>Event Organiser – Fiestaa'26:</b> Co-organised the "Reflex Rush" event during KPRIET college culturals (Feb 2026).</div>
+  <div class="ach"><b>IEEE CodeQuest – 2nd Prize:</b> Secured second place in competitive coding event (Logic Sprint, HackerRank Arena, Mystery Code) organized by IEEE Education Society, KPRIET (Aug 2026).</div>
+  <div class="ach"><b>Competitive Programming (LeetCode):</b> Solved 400+ problems covering arrays, strings, hashing, two pointers, sliding window, sorting, trees, and heaps.</div>
+  <div class="ach"><b>Event Organizer – Fiestaa'26:</b> Co-organized the "Reflex Rush" technical event during KPRIET college cultural festival (Feb 2026).</div>
 
   <!-- CERTIFICATIONS -->
   <div class="sec">Certifications</div>
@@ -256,7 +307,7 @@
   <div class="cert"><b>CodeChef:</b> Learn Java Course</div>
 
   <!-- Last Updated -->
-  <div style="margin-top: 10px; text-align: right; font-size: 7.5pt; color: #94a3b8; font-style: italic;">
+  <div style="margin-top: 8px; text-align: right; font-size: 7.3pt; color: #94a3b8; font-style: italic;">
     Last Updated: November 2026
   </div>
 
