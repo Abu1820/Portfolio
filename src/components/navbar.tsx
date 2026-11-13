@@ -121,11 +121,19 @@ export const Navbar = ({ hide }: NavbarProps) => {
             />
           </button>
 
+          {/* Backdrop overlay to close menu on tap outside */}
+          {toggle && (
+            <div
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs z-20"
+              onClick={() => setToggle(false)}
+            />
+          )}
+
           {/* Mobile Dropdown */}
           <div
             className={cn(
               toggle ? "flex" : "hidden",
-              "p-5 black-gradient absolute top-16 right-4 mx-0 my-0 min-w-48 z-30 rounded-2xl shadow-2xl border border-white/5",
+              "p-5 black-gradient absolute top-16 right-4 mx-0 my-0 min-w-[220px] max-h-[82vh] overflow-y-auto z-30 rounded-2xl shadow-2xl border border-white/10",
             )}
           >
             <ul className="list-none flex flex-col gap-1 w-full">

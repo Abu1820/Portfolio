@@ -136,24 +136,24 @@ export const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-col xs:flex-row flex-wrap gap-3">
             <a
               href="/resume.html"
               target="_blank"
               rel="noreferrer noopener"
-              className="bg-[#915eff] hover:bg-[#7b46e3] text-white font-semibold py-2.5 px-6 rounded-xl shadow-lg shadow-[#915eff]/30 transition duration-200 inline-flex items-center gap-2 text-sm"
+              className="bg-[#915eff] hover:bg-[#7b46e3] text-white font-semibold py-2.5 px-6 rounded-xl shadow-lg shadow-[#915eff]/30 transition duration-200 inline-flex items-center justify-center gap-2 text-sm w-full xs:w-auto"
             >
               View Resume ↗
             </a>
             <a
               href="#projects"
-              className="border border-[#915eff] text-white hover:bg-[#915eff]/15 font-semibold py-2.5 px-6 rounded-xl transition duration-200 inline-flex items-center text-sm"
+              className="border border-[#915eff] text-white hover:bg-[#915eff]/15 font-semibold py-2.5 px-6 rounded-xl transition duration-200 inline-flex items-center justify-center text-sm w-full xs:w-auto"
             >
               Explore Projects
             </a>
             <a
               href="#contact"
-              className="border border-white/20 text-white hover:bg-white/10 font-semibold py-2.5 px-6 rounded-xl transition duration-200 inline-flex items-center text-sm"
+              className="border border-white/20 text-white hover:bg-white/10 font-semibold py-2.5 px-6 rounded-xl transition duration-200 inline-flex items-center justify-center text-sm w-full xs:w-auto"
             >
               Get in Touch
             </a>
@@ -164,7 +164,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-8 flex flex-wrap gap-6 sm:gap-10 pt-6 border-t border-white/10"
+            className="mt-8 grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-10 pt-6 border-t border-white/10"
           >
             {STATS.map((stat, i) => (
               <div key={`stat-${i}`} className="flex flex-col">

@@ -334,13 +334,41 @@ canvas {
   }
 }
 
-/* Vertical timeline: smaller text on mobile */
-@media (max-width: 479px) {
+/* Vertical timeline: responsive single-column layout on mobile */
+@media (max-width: 639px) {
+  .vertical-timeline {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+  .vertical-timeline::before {
+    left: 20px !important;
+  }
+  .vertical-timeline-element-icon {
+    width: 38px !important;
+    height: 38px !important;
+    left: 2px !important;
+  }
+  .vertical-timeline-element-content {
+    margin-left: 50px !important;
+    padding: 0.85rem !important;
+  }
+  .vertical-timeline-element-content-arrow {
+    display: none !important;
+  }
   .vertical-timeline-element-content h3 {
-    font-size: 18px !important;
+    font-size: 17px !important;
   }
   .vertical-timeline-element-date {
-    font-size: 12px !important;
+    font-size: 11px !important;
+    padding: 0.2rem 0 !important;
+  }
+}
+
+/* Ensure mobile touch gestures pass through transparent canvas regions */
+@media (hover: none) and (pointer: coarse) {
+  canvas {
+    touch-action: pan-y !important;
   }
 }
 
